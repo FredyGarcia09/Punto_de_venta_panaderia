@@ -73,6 +73,16 @@ namespace ProyectoFinalGerman.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Admin {
+            get {
+                object obj = ResourceManager.GetObject("Admin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AgregarP {
             get {
                 object obj = ResourceManager.GetObject("AgregarP", resourceCulture);
@@ -123,9 +133,29 @@ namespace ProyectoFinalGerman.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap guardar {
+            get {
+                object obj = ResourceManager.GetObject("guardar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logotipo_panadería_artesanal_vintage_amarillo {
             get {
                 object obj = ResourceManager.GetObject("Logotipo panadería artesanal vintage amarillo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu_button_icon_icons_com_72989 {
+            get {
+                object obj = ResourceManager.GetObject("menu-button_icon-icons.com_72989", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
