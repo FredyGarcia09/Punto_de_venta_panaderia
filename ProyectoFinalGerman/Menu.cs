@@ -41,5 +41,26 @@ namespace ProyectoFinalGerman
         {
 
         }
+
+        private void btnReporteVentas_Click(object sender, EventArgs e)
+        {
+            ReporteVentas RE = new ReporteVentas();
+            RE.Show();
+            this.Hide();
+        }
+
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            AgregarProducto RE = new AgregarProducto();
+            RE.Show();
+            this.Hide();
+        }
+
+        private void btnRegistrarEmpleado_Click(object sender, EventArgs e)
+        {
+            RegistrarEmpleado RE = new RegistrarEmpleado();
+            RE.Show();
+            this.Hide();
+        }
     }
 }
