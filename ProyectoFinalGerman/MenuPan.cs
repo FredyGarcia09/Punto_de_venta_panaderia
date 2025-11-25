@@ -10,24 +10,21 @@ using System.Windows.Forms;
 
 namespace ProyectoFinalGerman
 {
-    public partial class Login : Form
+    public partial class MenuPan : Form
     {
-        public Login()
+        public MenuPan()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Menu RE = new Menu();
-            RE.Show();
-            this.Hide();
 
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
-            
+
         }
     }
 }

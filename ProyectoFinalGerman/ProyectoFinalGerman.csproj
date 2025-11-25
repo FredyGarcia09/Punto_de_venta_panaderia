@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPan.Designer.cs">
+      <DependentUpon>MenuPan.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistrarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +78,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPan.resx">
+      <DependentUpon>MenuPan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -101,6 +119,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\momotaro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bolillo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Concha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logotipo panadería artesanal vintage amarillo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-shopping-cart_90604.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReEmpleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReAdmin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporting_noun_report_document_file_icon_148360.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AgregarP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BorrarProducto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReporteVentas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
