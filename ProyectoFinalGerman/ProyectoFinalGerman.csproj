@@ -50,11 +50,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agregarcategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregarcategoria.Designer.cs">
+      <DependentUpon>Agregarcategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarProducto.Designer.cs">
+      <DependentUpon>EditarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -88,8 +100,14 @@
     <Compile Include="ReporteVentas.Designer.cs">
       <DependentUpon>ReporteVentas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Agregarcategoria.resx">
+      <DependentUpon>Agregarcategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarProducto.resx">
+      <DependentUpon>EditarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -179,6 +197,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subirFoto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editarPro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_13221.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

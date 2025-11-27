@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,74 +10,62 @@ using System.Windows.Forms;
 
 namespace ProyectoFinalGerman
 {
-    public partial class AgregarProducto : Form
+    public partial class EditarProducto : Form
     {
-        private int contador = 0;
-        public AgregarProducto()
+        public EditarProducto()
         {
             InitializeComponent();
             this.BackColor = ColorTranslator.FromHtml("#CD9B81");
             groupBox1.BackColor = ColorTranslator.FromHtml("#E9CEBB");
             groupBox2.BackColor = ColorTranslator.FromHtml("#A8B29B");
-            btnAgregarFoto.BackColor = ColorTranslator.FromHtml("#CD9B81");
             btnRegresar.FlatAppearance.BorderSize = 0;
-            btnSumar.FlatAppearance.BorderSize = 0;
-            btnRestar.FlatAppearance.BorderSize = 0;
             btnGuardar.FlatAppearance.BorderSize = 0;
+            btnBorrar.FlatAppearance.BorderSize = 0;
             btnAgregarFoto.FlatAppearance.BorderSize = 0;
-
+            btnRestar.FlatAppearance.BorderSize = 0;
+            btnSumar.FlatAppearance.BorderSize = 0;
         }
 
-        private void btnAgregarFoto_Click(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
-            OpenFileDialog abrirDialogo = new OpenFileDialog();
-            abrirDialogo.Filter = "Archivos PNG (*.png)|*.png";
-            abrirDialogo.Title = "Seleccionar Archivo PNG";
-            if (abrirDialogo.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    pictureBox1.Image = Image.FromFile(abrirDialogo.FileName);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("No se pudo cargar la imagen: " + ex.Message, "Error de Carga", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnRegresar_Click(object sender, EventArgs e)
         {
             Menu RE = new Menu();
             RE.Show();
             this.Hide();
         }
 
-        private void btnSumar_Click(object sender, EventArgs e)
+        private void btnBorrar_Click(object sender, EventArgs e)
         {
-            contador++;
-            txtCantidad.Text = contador.ToString();
-        }
+            DialogResult resultado = MessageBox.Show(
+                "¿Estás seguro que quieres borrar este producto?", 
+                "Confirmar Eliminación",                           
+                MessageBoxButtons.YesNo,                           
+                MessageBoxIcon.Warning                             
+            );
 
-        private void btnRestar_Click(object sender, EventArgs e)
-        {
-            contador--;
-            txtCantidad.Text = contador.ToString();
+            if (resultado == DialogResult.Yes)
+            {
+                MessageBox.Show("Producto eliminado exitosamente."); 
+
+            }
+            else
+            {
+                MessageBox.Show("Operación cancelada.");
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+           
+            
             
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            Agregarcategoria RE = new Agregarcategoria();
-            RE.Show();
-            this.Hide();
-        }
-
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Back)
             {
@@ -95,7 +82,7 @@ namespace ProyectoFinalGerman
             }
         }
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Back)
             {
@@ -105,14 +92,14 @@ namespace ProyectoFinalGerman
             {
                 if (((TextBox)sender).Text.Contains('.'))
                 {
-                    e.Handled = true; 
+                    e.Handled = true;
                     return;
                 }
-                return; 
+                return;
             }
             if (char.IsDigit(e.KeyChar))
             {
-                return; 
+                return;
             }
             e.Handled = true;
         }

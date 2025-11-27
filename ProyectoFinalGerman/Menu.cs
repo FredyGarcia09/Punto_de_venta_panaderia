@@ -19,7 +19,6 @@ namespace ProyectoFinalGerman
             groupBox4.BackColor = ColorTranslator.FromHtml("#C9C7B6");
             groupBox1.BackColor = ColorTranslator.FromHtml("#D7BFA8");
             btnAgregarProducto.FlatAppearance.BorderSize = 0;
-            btnBorrarProducto.FlatAppearance.BorderSize = 0;
             btnEditarProducto.FlatAppearance.BorderSize = 0;
             btnRegistrarAdmin.FlatAppearance.BorderSize = 0;
             btnRegistrarEmpleado.FlatAppearance.BorderSize = 0;
@@ -59,6 +58,13 @@ namespace ProyectoFinalGerman
         private void btnRegistrarEmpleado_Click(object sender, EventArgs e)
         {
             RegistrarEmpleado RE = new RegistrarEmpleado();
+            RE.Show();
+            this.Hide();
+        }
+
+        private void btnEditarProducto_Click(object sender, EventArgs e)
+        {
+            EditarProducto RE = new EditarProducto();
             RE.Show();
             this.Hide();
         }

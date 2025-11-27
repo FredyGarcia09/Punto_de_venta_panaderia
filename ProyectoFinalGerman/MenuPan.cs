@@ -43,5 +43,17 @@ namespace ProyectoFinalGerman
         {
 
         }
+        
+        private void panelMenuOpciones_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            Menu RE = new Menu();
+            RE.Show();
+            this.Hide();
+        }
     }
 }
