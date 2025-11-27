@@ -41,5 +41,17 @@ namespace ProyectoFinalGerman
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegistrarEmpleado_Click(object sender, EventArgs e)
+        {
+            RegistrarEmpleado ReEm = new RegistrarEmpleado();
+            ReEm.Show();
+            this.Hide();
+        }
     }
 }

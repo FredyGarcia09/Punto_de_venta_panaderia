@@ -133,6 +133,16 @@ namespace ProyectoFinalGerman.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap menuDisplay {
+            get {
+                object obj = ResourceManager.GetObject("menuDisplay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap momotaro {
             get {
                 object obj = ResourceManager.GetObject("momotaro", resourceCulture);
