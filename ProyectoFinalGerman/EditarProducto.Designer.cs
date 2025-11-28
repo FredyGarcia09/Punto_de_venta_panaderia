@@ -46,6 +46,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnDescontinuar = new System.Windows.Forms.Button();
+            this.bntDarAlta = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,6 +76,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnDescontinuar);
+            this.groupBox3.Controls.Add(this.bntDarAlta);
             this.groupBox3.Controls.Add(this.btnRestar);
             this.groupBox3.Controls.Add(this.btnSumar);
             this.groupBox3.Controls.Add(this.btnAgregarFoto);
@@ -224,7 +228,7 @@
             // 
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Image = global::ProyectoFinalGerman.Properties.Resources.delete_13221;
-            this.btnBorrar.Location = new System.Drawing.Point(298, 491);
+            this.btnBorrar.Location = new System.Drawing.Point(294, 491);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(75, 48);
             this.btnBorrar.TabIndex = 16;
@@ -235,12 +239,30 @@
             // 
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Image = global::ProyectoFinalGerman.Properties.Resources.guardar1;
-            this.btnGuardar.Location = new System.Drawing.Point(583, 491);
+            this.btnGuardar.Location = new System.Drawing.Point(550, 491);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 43);
+            this.btnGuardar.Size = new System.Drawing.Size(75, 46);
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnDescontinuar
+            // 
+            this.btnDescontinuar.Location = new System.Drawing.Point(616, 240);
+            this.btnDescontinuar.Name = "btnDescontinuar";
+            this.btnDescontinuar.Size = new System.Drawing.Size(114, 33);
+            this.btnDescontinuar.TabIndex = 17;
+            this.btnDescontinuar.Text = "Descontinuar";
+            this.btnDescontinuar.UseVisualStyleBackColor = true;
+            // 
+            // bntDarAlta
+            // 
+            this.bntDarAlta.Location = new System.Drawing.Point(764, 240);
+            this.bntDarAlta.Name = "bntDarAlta";
+            this.bntDarAlta.Size = new System.Drawing.Size(115, 33);
+            this.bntDarAlta.TabIndex = 18;
+            this.bntDarAlta.Text = "Dar de alta";
+            this.bntDarAlta.UseVisualStyleBackColor = true;
             // 
             // EditarProducto
             // 
@@ -285,5 +307,7 @@
         private System.Windows.Forms.Button btnRestar;
         private System.Windows.Forms.Button btnSumar;
         private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.Button btnDescontinuar;
+        private System.Windows.Forms.Button bntDarAlta;
     }
 }

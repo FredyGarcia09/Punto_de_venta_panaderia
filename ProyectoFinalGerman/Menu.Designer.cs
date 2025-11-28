@@ -205,6 +205,7 @@
             this.btnReporteCambios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReporteCambios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReporteCambios.UseVisualStyleBackColor = false;
+            this.btnReporteCambios.Click += new System.EventHandler(this.btnReporteCambios_Click);
             // 
             // btnRegistrarVenta
             // 

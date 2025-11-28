@@ -68,5 +68,12 @@ namespace ProyectoFinalGerman
             RE.Show();
             this.Hide();
         }
+
+        private void btnReporteCambios_Click(object sender, EventArgs e)
+        {
+            ReporteCambios RE = new ReporteCambios();
+            RE.Show();
+            this.Hide();
+        }
     }
 }
