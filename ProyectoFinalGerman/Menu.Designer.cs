@@ -41,7 +41,6 @@
             this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.btnReporteCambios = new System.Windows.Forms.Button();
             this.btnRegistrarVenta = new System.Windows.Forms.Button();
-            this.btnRegistrarAdmin = new System.Windows.Forms.Button();
             this.btnRegistrarEmpleado = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
@@ -68,7 +67,6 @@
             this.groupBox2.Controls.Add(this.btnAgregarProducto);
             this.groupBox2.Controls.Add(this.btnReporteCambios);
             this.groupBox2.Controls.Add(this.btnRegistrarVenta);
-            this.groupBox2.Controls.Add(this.btnRegistrarAdmin);
             this.groupBox2.Controls.Add(this.btnRegistrarEmpleado);
             this.groupBox2.Controls.Add(this.btnCerrar);
             this.groupBox2.Controls.Add(this.label1);
@@ -114,7 +112,7 @@
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = global::ProyectoFinalGerman.Properties.Resources.Concha;
-            this.pictureBox2.Location = new System.Drawing.Point(350, 298);
+            this.pictureBox2.Location = new System.Drawing.Point(336, 242);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(269, 303);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -126,7 +124,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::ProyectoFinalGerman.Properties.Resources.Bolillo;
-            this.pictureBox1.Location = new System.Drawing.Point(120, 65);
+            this.pictureBox1.Location = new System.Drawing.Point(112, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(253, 279);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -149,7 +147,7 @@
             this.btnReporteVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReporteVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporteVentas.Image = global::ProyectoFinalGerman.Properties.Resources.ReporteVentas;
-            this.btnReporteVentas.Location = new System.Drawing.Point(28, 459);
+            this.btnReporteVentas.Location = new System.Drawing.Point(26, 402);
             this.btnReporteVentas.Name = "btnReporteVentas";
             this.btnReporteVentas.Size = new System.Drawing.Size(269, 50);
             this.btnReporteVentas.TabIndex = 9;
@@ -165,7 +163,7 @@
             this.btnEditarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarProducto.Image = global::ProyectoFinalGerman.Properties.Resources.Editar;
-            this.btnEditarProducto.Location = new System.Drawing.Point(28, 403);
+            this.btnEditarProducto.Location = new System.Drawing.Point(26, 346);
             this.btnEditarProducto.Name = "btnEditarProducto";
             this.btnEditarProducto.Size = new System.Drawing.Size(269, 50);
             this.btnEditarProducto.TabIndex = 8;
@@ -181,7 +179,7 @@
             this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarProducto.Image = global::ProyectoFinalGerman.Properties.Resources.AgregarP;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(28, 347);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(26, 290);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(269, 50);
             this.btnAgregarProducto.TabIndex = 6;
@@ -197,7 +195,7 @@
             this.btnReporteCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReporteCambios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporteCambios.Image = global::ProyectoFinalGerman.Properties.Resources.reporting_noun_report_document_file_icon_148360;
-            this.btnReporteCambios.Location = new System.Drawing.Point(28, 291);
+            this.btnReporteCambios.Location = new System.Drawing.Point(26, 234);
             this.btnReporteCambios.Name = "btnReporteCambios";
             this.btnReporteCambios.Size = new System.Drawing.Size(269, 50);
             this.btnReporteCambios.TabIndex = 5;
@@ -213,7 +211,7 @@
             this.btnRegistrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarVenta.Image = global::ProyectoFinalGerman.Properties.Resources._shopping_cart_90604;
-            this.btnRegistrarVenta.Location = new System.Drawing.Point(30, 235);
+            this.btnRegistrarVenta.Location = new System.Drawing.Point(28, 178);
             this.btnRegistrarVenta.Name = "btnRegistrarVenta";
             this.btnRegistrarVenta.Size = new System.Drawing.Size(269, 50);
             this.btnRegistrarVenta.TabIndex = 4;
@@ -223,28 +221,13 @@
             this.btnRegistrarVenta.UseVisualStyleBackColor = false;
             this.btnRegistrarVenta.Click += new System.EventHandler(this.btnRegistrarVenta_Click);
             // 
-            // btnRegistrarAdmin
-            // 
-            this.btnRegistrarAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegistrarAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarAdmin.Image = global::ProyectoFinalGerman.Properties.Resources.ReAdmin;
-            this.btnRegistrarAdmin.Location = new System.Drawing.Point(30, 179);
-            this.btnRegistrarAdmin.Name = "btnRegistrarAdmin";
-            this.btnRegistrarAdmin.Size = new System.Drawing.Size(269, 50);
-            this.btnRegistrarAdmin.TabIndex = 3;
-            this.btnRegistrarAdmin.Text = "Registrar Administrador";
-            this.btnRegistrarAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRegistrarAdmin.UseVisualStyleBackColor = false;
-            // 
             // btnRegistrarEmpleado
             // 
             this.btnRegistrarEmpleado.BackColor = System.Drawing.Color.Transparent;
             this.btnRegistrarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarEmpleado.Image = global::ProyectoFinalGerman.Properties.Resources.ReEmpleado;
-            this.btnRegistrarEmpleado.Location = new System.Drawing.Point(30, 123);
+            this.btnRegistrarEmpleado.Location = new System.Drawing.Point(28, 122);
             this.btnRegistrarEmpleado.Name = "btnRegistrarEmpleado";
             this.btnRegistrarEmpleado.Size = new System.Drawing.Size(269, 50);
             this.btnRegistrarEmpleado.TabIndex = 2;
@@ -268,7 +251,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(999, 686);
+            this.ClientSize = new System.Drawing.Size(999, 613);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
@@ -290,7 +273,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnReporteCambios;
         private System.Windows.Forms.Button btnRegistrarVenta;
-        private System.Windows.Forms.Button btnRegistrarAdmin;
         private System.Windows.Forms.Button btnRegistrarEmpleado;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label1;

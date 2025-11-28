@@ -20,7 +20,6 @@ namespace ProyectoFinalGerman
             groupBox1.BackColor = ColorTranslator.FromHtml("#D7BFA8");
             btnAgregarProducto.FlatAppearance.BorderSize = 0;
             btnEditarProducto.FlatAppearance.BorderSize = 0;
-            btnRegistrarAdmin.FlatAppearance.BorderSize = 0;
             btnRegistrarEmpleado.FlatAppearance.BorderSize = 0;
             btnRegistrarVenta.FlatAppearance.BorderSize = 0;
             btnReporteCambios.FlatAppearance.BorderSize = 0;

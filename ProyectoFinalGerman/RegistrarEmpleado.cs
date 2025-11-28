@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace ProyectoFinalGerman
 {
@@ -15,6 +16,12 @@ namespace ProyectoFinalGerman
         public RegistrarEmpleado()
         {
             InitializeComponent();
+            this.BackColor = ColorTranslator.FromHtml("#DAA897");
+            groupBox2.BackColor = ColorTranslator.FromHtml("#BFB6AD");
+            groupBox1.BackColor = ColorTranslator.FromHtml("#D7BFA8");
+            btnRegistrarUsuario.BackColor = ColorTranslator.FromHtml("#F7E1D5");
+            btnRegistrarUsuario.FlatAppearance.BorderSize = 0;
+            btnRegresar.FlatAppearance.BorderSize = 0;
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -30,6 +37,13 @@ namespace ProyectoFinalGerman
         private void label15_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Menu RE = new Menu();
+            RE.Show();
+            this.Hide();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace ProyectoFinalGerman
 {
@@ -15,6 +16,10 @@ namespace ProyectoFinalGerman
         public Login()
         {
             InitializeComponent();
+            this.BackColor = ColorTranslator.FromHtml("#D8C4B3");
+            groupBox1.BackColor = ColorTranslator.FromHtml("#F5E6D7");
+            btnEntrar.BackColor = ColorTranslator.FromHtml("#C3A295");
+            btnEntrar.FlatAppearance.BorderSize = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
