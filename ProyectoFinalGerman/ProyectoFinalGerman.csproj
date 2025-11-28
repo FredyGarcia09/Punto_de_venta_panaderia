@@ -127,6 +127,12 @@
     <Compile Include="MenuPan.Designer.cs">
       <DependentUpon>MenuPan.cs</DependentUpon>
     </Compile>
+    <Compile Include="MODELOS\Categoria.cs" />
+    <Compile Include="MODELOS\DetalleOrden.cs" />
+    <Compile Include="MODELOS\ITEMS\ReporteCorporativoItem.cs" />
+    <Compile Include="MODELOS\ITEMS\ReporteVentaItem.cs" />
+    <Compile Include="MODELOS\Orden.cs" />
+    <Compile Include="MODELOS\Producto.cs" />
     <Compile Include="MODELOS\Usuario.cs" />
     <Compile Include="RegistrarEmpleado.cs">
       <SubType>Form</SubType>
