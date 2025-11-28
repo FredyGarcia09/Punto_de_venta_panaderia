@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinalGerman.MODELOS
 {
-    internal class Usuario
+    public class Usuario
     {
+        public int IdUsuario { get; set; }
+        public string Nombre { get; set; }
+        public string Apellidos { get; set; }
+        public string NombreUsuario { get; set; }
+        public string ContrasenhaHash { get; set; }
+        public string TipoUsuario { get; set; } // Empleado o admin
+
+        // Para interfaz
+        public string NombreCompleto => $"{Nombre} {Apellidos}";
     }
 }
