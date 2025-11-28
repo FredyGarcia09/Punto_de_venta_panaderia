@@ -136,8 +136,23 @@
   <data name="xd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="atras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\atras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu-button_icon-icons.com_72989" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu-button_icon-icons.com_72989.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="subirFoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\subirFoto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="reporting_noun_report_document_file_icon_148360" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reporting_noun_report_document_file_icon_148360.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editarPro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editarPro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="-shopping-cart_90604" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\-shopping-cart_90604.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -162,5 +177,13 @@
   </data>
   <data name="menuDisplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menuDisplay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="guardar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guardar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_13221" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_13221.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

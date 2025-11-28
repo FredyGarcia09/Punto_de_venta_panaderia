@@ -19,7 +19,6 @@ namespace ProyectoFinalGerman
             groupBox4.BackColor = ColorTranslator.FromHtml("#C9C7B6");
             groupBox1.BackColor = ColorTranslator.FromHtml("#D7BFA8");
             btnAgregarProducto.FlatAppearance.BorderSize = 0;
-            btnBorrarProducto.FlatAppearance.BorderSize = 0;
             btnEditarProducto.FlatAppearance.BorderSize = 0;
             btnRegistrarAdmin.FlatAppearance.BorderSize = 0;
             btnRegistrarEmpleado.FlatAppearance.BorderSize = 0;
@@ -42,15 +41,31 @@ namespace ProyectoFinalGerman
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void btnReporteVentas_Click(object sender, EventArgs e)
         {
+            ReporteVentas RE = new ReporteVentas();
+            RE.Show();
+            this.Hide();
+        }
 
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            AgregarProducto RE = new AgregarProducto();
+            RE.Show();
+            this.Hide();
         }
 
         private void btnRegistrarEmpleado_Click(object sender, EventArgs e)
         {
-            RegistrarEmpleado ReEm = new RegistrarEmpleado();
-            ReEm.Show();
+            RegistrarEmpleado RE = new RegistrarEmpleado();
+            RE.Show();
+            this.Hide();
+        }
+
+        private void btnEditarProducto_Click(object sender, EventArgs e)
+        {
+            EditarProducto RE = new EditarProducto();
+            RE.Show();
             this.Hide();
         }
     }

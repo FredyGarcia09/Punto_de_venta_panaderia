@@ -32,10 +32,13 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnReporteVentas = new System.Windows.Forms.Button();
             this.btnEditarProducto = new System.Windows.Forms.Button();
-            this.btnBorrarProducto = new System.Windows.Forms.Button();
             this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.btnReporteCambios = new System.Windows.Forms.Button();
             this.btnRegistrarVenta = new System.Windows.Forms.Button();
@@ -43,26 +46,19 @@
             this.btnRegistrarEmpleado = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pictureBox3);
-            this.groupBox1.Location = new System.Drawing.Point(235, -7);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(313, -9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(517, 80);
+            this.groupBox1.Size = new System.Drawing.Size(689, 67);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -84,7 +80,6 @@
             this.groupBox2.Controls.Add(this.pictureBox4);
             this.groupBox2.Controls.Add(this.btnReporteVentas);
             this.groupBox2.Controls.Add(this.btnEditarProducto);
-            this.groupBox2.Controls.Add(this.btnBorrarProducto);
             this.groupBox2.Controls.Add(this.btnAgregarProducto);
             this.groupBox2.Controls.Add(this.btnReporteCambios);
             this.groupBox2.Controls.Add(this.btnRegistrarVenta);
@@ -103,19 +98,65 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 31);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(97, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "Aministrador";
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.SandyBrown;
+            this.btnCerrar.Location = new System.Drawing.Point(258, 35);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(32, 32);
+            this.btnCerrar.TabIndex = 1;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.pictureBox2);
+            this.groupBox4.Controls.Add(this.pictureBox1);
+            this.groupBox4.Location = new System.Drawing.Point(313, 48);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(689, 639);
+            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Image = global::ProyectoFinalGerman.Properties.Resources.Concha;
+            this.pictureBox2.Location = new System.Drawing.Point(350, 298);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(269, 303);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::ProyectoFinalGerman.Properties.Resources.Bolillo;
+            this.pictureBox1.Location = new System.Drawing.Point(120, 65);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(253, 279);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(22, 28);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Image = global::ProyectoFinalGerman.Properties.Resources.Admin;
+            this.pictureBox4.Location = new System.Drawing.Point(28, 21);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox4.Size = new System.Drawing.Size(63, 57);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;
             // 
@@ -125,8 +166,7 @@
             this.btnReporteVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReporteVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporteVentas.Image = global::ProyectoFinalGerman.Properties.Resources.ReporteVentas;
-            this.btnReporteVentas.Location = new System.Drawing.Point(22, 418);
-            this.btnReporteVentas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReporteVentas.Location = new System.Drawing.Point(28, 459);
             this.btnReporteVentas.Name = "btnReporteVentas";
             this.btnReporteVentas.Size = new System.Drawing.Size(202, 41);
             this.btnReporteVentas.TabIndex = 9;
@@ -134,6 +174,7 @@
             this.btnReporteVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReporteVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReporteVentas.UseVisualStyleBackColor = false;
+            this.btnReporteVentas.Click += new System.EventHandler(this.btnReporteVentas_Click);
             // 
             // btnEditarProducto
             // 
@@ -141,8 +182,7 @@
             this.btnEditarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarProducto.Image = global::ProyectoFinalGerman.Properties.Resources.Editar;
-            this.btnEditarProducto.Location = new System.Drawing.Point(21, 373);
-            this.btnEditarProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditarProducto.Location = new System.Drawing.Point(28, 403);
             this.btnEditarProducto.Name = "btnEditarProducto";
             this.btnEditarProducto.Size = new System.Drawing.Size(202, 41);
             this.btnEditarProducto.TabIndex = 8;
@@ -150,22 +190,7 @@
             this.btnEditarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditarProducto.UseVisualStyleBackColor = false;
-            // 
-            // btnBorrarProducto
-            // 
-            this.btnBorrarProducto.BackColor = System.Drawing.Color.Transparent;
-            this.btnBorrarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrarProducto.Image = global::ProyectoFinalGerman.Properties.Resources.BorrarProducto;
-            this.btnBorrarProducto.Location = new System.Drawing.Point(22, 327);
-            this.btnBorrarProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBorrarProducto.Name = "btnBorrarProducto";
-            this.btnBorrarProducto.Size = new System.Drawing.Size(202, 41);
-            this.btnBorrarProducto.TabIndex = 7;
-            this.btnBorrarProducto.Text = "  Borrar   Productos";
-            this.btnBorrarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBorrarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBorrarProducto.UseVisualStyleBackColor = false;
+            this.btnEditarProducto.Click += new System.EventHandler(this.btnEditarProducto_Click);
             // 
             // btnAgregarProducto
             // 
@@ -182,6 +207,7 @@
             this.btnAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarProducto.UseVisualStyleBackColor = false;
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
             // btnReporteCambios
             // 
@@ -249,17 +275,6 @@
             this.btnRegistrarEmpleado.UseVisualStyleBackColor = false;
             this.btnRegistrarEmpleado.Click += new System.EventHandler(this.btnRegistrarEmpleado_Click);
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(194, 28);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(24, 19);
-            this.btnCerrar.TabIndex = 1;
-            this.btnCerrar.Text = "X";
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -317,14 +332,13 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
             this.Text = "Menu";
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,12 +355,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnReporteVentas;
         private System.Windows.Forms.Button btnEditarProducto;
-        private System.Windows.Forms.Button btnBorrarProducto;
         private System.Windows.Forms.Button btnAgregarProducto;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox4;
     }
