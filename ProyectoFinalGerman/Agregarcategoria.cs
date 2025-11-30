@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoFinalGerman.BACKEND.DAOs;
+using ProyectoFinalGerman.MODELOS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -61,6 +63,56 @@ namespace ProyectoFinalGerman
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNombreCategoria.Text))
+            {
+                MessageBox.Show("El nombre de la categoría es obligatorio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string descripcion = rtbDescripcionCategoria.Text.Trim(); 
+
+            if (descripcion.Length > 255)
+            {
+                MessageBox.Show("La descripción es demasiado larga. Máximo 255 caracteres.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                Categoria nuevaCat = new Categoria();
+                nuevaCat.NombreCategoria = txtNombreCategoria.Text.Trim();
+                nuevaCat.Descripcion = descripcion;
+
+                CategoriaDao dao = new CategoriaDao();
+                string mensaje;
+
+                if (dao.RegistrarCategoria(nuevaCat, out mensaje))
+                {
+                    MessageBox.Show(mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarCampos();
+                }
+                else
+                {
+                    MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
+        }
+
+        private void LimpiarCampos()
+        {
+            txtNombreCategoria.Clear();
+            rtbDescripcionCategoria.Clear();
+            txtNombreCategoria.Focus();
         }
     }
 }

@@ -108,6 +108,7 @@
     <Compile Include="AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="BACKEND\DAOs\CategoriaDAO.cs" />
     <Compile Include="BACKEND\DAOs\UsuarioDAO.cs" />
     <Compile Include="EditarProducto.cs">
       <SubType>Form</SubType>
