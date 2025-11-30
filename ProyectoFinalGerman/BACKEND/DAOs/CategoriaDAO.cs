@@ -26,7 +26,7 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
 
                         cmd.Parameters.AddWithValue("p_Nombre", cat.NombreCategoria);
 
-                        // Manejo de nulos para descripción (es opcional en tu diseño)
+                        // Manejo de nulos para descripción
                         cmd.Parameters.AddWithValue("p_Descripcion",
                             string.IsNullOrEmpty(cat.Descripcion) ? DBNull.Value : (object)cat.Descripcion);
 
