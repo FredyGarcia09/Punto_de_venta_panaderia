@@ -108,6 +108,7 @@
     <Compile Include="AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="BACKEND\DAOs\UsuarioDAO.cs" />
     <Compile Include="EditarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,5 +281,6 @@
   <ItemGroup>
     <None Include="Resources\registrarUsuario.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
