@@ -91,11 +91,11 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.SandyBrown;
-            this.btnCerrar.Location = new System.Drawing.Point(258, 35);
+            this.btnCerrar.Image = global::ProyectoFinalGerman.Properties.Resources.Exit;
+            this.btnCerrar.Location = new System.Drawing.Point(226, 25);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(32, 32);
+            this.btnCerrar.Size = new System.Drawing.Size(51, 46);
             this.btnCerrar.TabIndex = 1;
-            this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = false;
             // 
             // groupBox4
