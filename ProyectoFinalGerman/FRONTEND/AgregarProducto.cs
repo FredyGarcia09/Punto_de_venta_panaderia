@@ -55,9 +55,7 @@ namespace ProyectoFinalGerman
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Menu RE = new Menu();
-            RE.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnSumar_Click(object sender, EventArgs e)
@@ -77,7 +75,7 @@ namespace ProyectoFinalGerman
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // 1. VALIDACIONES
+            // VALIDACIONES
             if (string.IsNullOrWhiteSpace(txtNombreProducto.Text) ||
                 string.IsNullOrWhiteSpace(txtPrecioProducto.Text))
             {
@@ -124,8 +122,7 @@ namespace ProyectoFinalGerman
                 // Guardar en DB
                 ProductoDAO dao = new ProductoDAO();
                 string mensaje;
-                // NOTA: Aquí pon el usuario logueado. Por ahora, usaremos "Admin"
-                string usuarioActual = "Admin";
+                string usuarioActual = Sesion.UsuarioAcceso;
 
                 if (dao.InsertarProducto(prod, usuarioActual, out mensaje))
                 {

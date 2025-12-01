@@ -41,9 +41,7 @@ namespace ProyectoFinalGerman
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            Menu RE = new Menu();
-            RE.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnRegistrarUsuario_Click(object sender, EventArgs e)

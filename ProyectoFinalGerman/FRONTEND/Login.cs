@@ -49,9 +49,11 @@ namespace ProyectoFinalGerman
 
                 MessageBox.Show($"Bienvenido, {Sesion.NombreCompleto} ({Sesion.Rol})", "Acceso Correcto");
                 
-                Menu menu = new Menu();
+                Menu menu = new Menu(this);
                 menu.Show();
                 this.Hide();
+                txtPass.Clear();
+                txtUsuario.Clear();
             }
             else
             {

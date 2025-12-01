@@ -18,5 +18,14 @@ namespace ProyectoFinalGerman.MODELOS
         {
             get { return Nombre + " " + Apellidos; }
         }
+
+        public static void CerrarSesion()
+        {
+            IdUsuario = 0;
+            Nombre = string.Empty;
+            Apellidos = string.Empty;
+            UsuarioAcceso = string.Empty;
+            Rol = string.Empty;
+        }
     }
 }
