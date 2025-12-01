@@ -1,4 +1,5 @@
-﻿using ProyectoFinalGerman.MODELOS;
+﻿using ProyectoFinalGerman.FRONTEND;
+using ProyectoFinalGerman.MODELOS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +30,7 @@ namespace ProyectoFinalGerman
             btnReporteVentas.FlatAppearance.BorderSize = 0;
             btnCerrar.FlatAppearance.BorderSize = 0;
             btnAdministrarUsuarios.FlatAppearance.BorderSize = 0;
+            btnAuditoriaProd.FlatAppearance.BorderSize = 0;
             _loginForm = login;
 
             if (Sesion.Rol != "Administrador")
@@ -108,6 +110,20 @@ namespace ProyectoFinalGerman
                 _esLogout = true;
                 _loginForm.Show();
                 this.Close();
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AuditoriaProductos RE = new AuditoriaProductos();
+            RE.ShowDialog();
+        }
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(!_esLogout)
+            {
+                Application.Exit();
             }
         }
     }

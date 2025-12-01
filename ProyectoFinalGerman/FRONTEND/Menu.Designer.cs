@@ -30,21 +30,22 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.btnAdministrarUsuarios = new System.Windows.Forms.Button();
+            this.btnRegistrarVenta = new System.Windows.Forms.Button();
             this.lblRol = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnReporteVentas = new System.Windows.Forms.Button();
             this.btnEditarProducto = new System.Windows.Forms.Button();
             this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.btnReporteCambios = new System.Windows.Forms.Button();
-            this.btnRegistrarVenta = new System.Windows.Forms.Button();
             this.btnRegistrarEmpleado = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblNombre = new System.Windows.Forms.Label();
+            this.btnAuditoriaProd = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -62,6 +63,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnAuditoriaProd);
             this.groupBox2.Controls.Add(this.lblNombre);
             this.groupBox2.Controls.Add(this.btnAdministrarUsuarios);
             this.groupBox2.Controls.Add(this.btnRegistrarVenta);
@@ -80,6 +82,14 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(90, 50);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(0, 16);
+            this.lblNombre.TabIndex = 13;
+            // 
             // btnAdministrarUsuarios
             // 
             this.btnAdministrarUsuarios.BackColor = System.Drawing.Color.Transparent;
@@ -95,6 +105,22 @@
             this.btnAdministrarUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdministrarUsuarios.UseVisualStyleBackColor = false;
             this.btnAdministrarUsuarios.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnRegistrarVenta
+            // 
+            this.btnRegistrarVenta.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegistrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarVenta.Image = global::ProyectoFinalGerman.Properties.Resources._shopping_cart_90604;
+            this.btnRegistrarVenta.Location = new System.Drawing.Point(26, 122);
+            this.btnRegistrarVenta.Name = "btnRegistrarVenta";
+            this.btnRegistrarVenta.Size = new System.Drawing.Size(269, 50);
+            this.btnRegistrarVenta.TabIndex = 4;
+            this.btnRegistrarVenta.Text = "Registrar Venta/Caja";
+            this.btnRegistrarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrarVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegistrarVenta.UseVisualStyleBackColor = false;
+            this.btnRegistrarVenta.Click += new System.EventHandler(this.btnRegistrarVenta_Click);
             // 
             // lblRol
             // 
@@ -179,22 +205,6 @@
             this.btnReporteCambios.UseVisualStyleBackColor = false;
             this.btnReporteCambios.Click += new System.EventHandler(this.btnReporteCambios_Click);
             // 
-            // btnRegistrarVenta
-            // 
-            this.btnRegistrarVenta.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegistrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarVenta.Image = global::ProyectoFinalGerman.Properties.Resources._shopping_cart_90604;
-            this.btnRegistrarVenta.Location = new System.Drawing.Point(26, 122);
-            this.btnRegistrarVenta.Name = "btnRegistrarVenta";
-            this.btnRegistrarVenta.Size = new System.Drawing.Size(269, 50);
-            this.btnRegistrarVenta.TabIndex = 4;
-            this.btnRegistrarVenta.Text = "Registrar Venta/Caja";
-            this.btnRegistrarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRegistrarVenta.UseVisualStyleBackColor = false;
-            this.btnRegistrarVenta.Click += new System.EventHandler(this.btnRegistrarVenta_Click);
-            // 
             // btnRegistrarEmpleado
             // 
             this.btnRegistrarEmpleado.BackColor = System.Drawing.Color.Transparent;
@@ -267,13 +277,21 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // lblNombre
+            // btnAuditoriaProd
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(90, 50);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(0, 16);
-            this.lblNombre.TabIndex = 13;
+            this.btnAuditoriaProd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAuditoriaProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAuditoriaProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAuditoriaProd.Image = global::ProyectoFinalGerman.Properties.Resources.ReAdmin;
+            this.btnAuditoriaProd.Location = new System.Drawing.Point(26, 514);
+            this.btnAuditoriaProd.Name = "btnAuditoriaProd";
+            this.btnAuditoriaProd.Size = new System.Drawing.Size(269, 50);
+            this.btnAuditoriaProd.TabIndex = 14;
+            this.btnAuditoriaProd.Text = "Auditoría de Productos";
+            this.btnAuditoriaProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAuditoriaProd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAuditoriaProd.UseVisualStyleBackColor = false;
+            this.btnAuditoriaProd.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Menu
             // 
@@ -286,6 +304,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "Menu";
             this.Text = "Menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -316,5 +335,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnAdministrarUsuarios;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnAuditoriaProd;
     }
 }
