@@ -32,6 +32,8 @@
             this.btnRegresar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rtbDescripcionProducto = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnAgregarCategoria = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
@@ -47,8 +49,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.rtbDescripcionProducto = new System.Windows.Forms.RichTextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
@@ -84,6 +85,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.rtbDescripcionProducto);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.btnAgregarCategoria);
@@ -105,6 +107,24 @@
             this.groupBox3.Size = new System.Drawing.Size(938, 375);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
+            // 
+            // rtbDescripcionProducto
+            // 
+            this.rtbDescripcionProducto.Location = new System.Drawing.Point(236, 257);
+            this.rtbDescripcionProducto.Name = "rtbDescripcionProducto";
+            this.rtbDescripcionProducto.Size = new System.Drawing.Size(642, 92);
+            this.rtbDescripcionProducto.TabIndex = 15;
+            this.rtbDescripcionProducto.Text = "";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(234, 229);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(208, 22);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Descripción del producto";
             // 
             // btnAgregarCategoria
             // 
@@ -129,6 +149,7 @@
             // 
             // cboCategoria
             // 
+            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCategoria.FormattingEnabled = true;
             this.cboCategoria.Location = new System.Drawing.Point(238, 183);
@@ -171,9 +192,9 @@
             // txtPrecioProducto
             // 
             this.txtPrecioProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioProducto.Location = new System.Drawing.Point(238, 118);
+            this.txtPrecioProducto.Location = new System.Drawing.Point(268, 118);
             this.txtPrecioProducto.Name = "txtPrecioProducto";
-            this.txtPrecioProducto.Size = new System.Drawing.Size(313, 28);
+            this.txtPrecioProducto.Size = new System.Drawing.Size(283, 28);
             this.txtPrecioProducto.TabIndex = 8;
             this.txtPrecioProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
@@ -262,23 +283,15 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // label6
+            // label7
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(234, 229);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(208, 22);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Descripción del producto";
-            // 
-            // rtbDescripcionProducto
-            // 
-            this.rtbDescripcionProducto.Location = new System.Drawing.Point(236, 257);
-            this.rtbDescripcionProducto.Name = "rtbDescripcionProducto";
-            this.rtbDescripcionProducto.Size = new System.Drawing.Size(642, 92);
-            this.rtbDescripcionProducto.TabIndex = 15;
-            this.rtbDescripcionProducto.Text = "";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(242, 119);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(20, 22);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "$";
             // 
             // AgregarProducto
             // 
@@ -325,5 +338,6 @@
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox rtbDescripcionProducto;
+        private System.Windows.Forms.Label label7;
     }
 }

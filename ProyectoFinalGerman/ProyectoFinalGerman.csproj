@@ -96,56 +96,56 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agregarcategoria.cs">
+    <Compile Include="FRONTEND\Agregarcategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Agregarcategoria.Designer.cs">
+    <Compile Include="FRONTEND\Agregarcategoria.Designer.cs">
       <DependentUpon>Agregarcategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarProducto.cs">
+    <Compile Include="FRONTEND\AgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarProducto.Designer.cs">
+    <Compile Include="FRONTEND\AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="BACKEND\DAOs\CategoriaDAO.cs" />
     <Compile Include="BACKEND\DAOs\ProductoDAO.cs" />
     <Compile Include="BACKEND\DAOs\UsuarioDAO.cs" />
-    <Compile Include="EditarDatosEmpleado.cs">
+    <Compile Include="FRONTEND\EditarDatosEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarDatosEmpleado.Designer.cs">
+    <Compile Include="FRONTEND\EditarDatosEmpleado.Designer.cs">
       <DependentUpon>EditarDatosEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditarEmpleado.cs">
+    <Compile Include="FRONTEND\EditarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarEmpleado.Designer.cs">
+    <Compile Include="FRONTEND\EditarEmpleado.Designer.cs">
       <DependentUpon>EditarEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditarProducto.cs">
+    <Compile Include="FRONTEND\EditarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarProducto.Designer.cs">
+    <Compile Include="FRONTEND\EditarProducto.Designer.cs">
       <DependentUpon>EditarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="BACKEND\ConectionDB.cs" />
-    <Compile Include="Ticket.cs">
+    <Compile Include="FRONTEND\Ticket.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ticket.Designer.cs">
+    <Compile Include="FRONTEND\Ticket.Designer.cs">
       <DependentUpon>Ticket.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="FRONTEND\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
+    <Compile Include="FRONTEND\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuPan.cs">
+    <Compile Include="FRONTEND\MenuPan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuPan.Designer.cs">
+    <Compile Include="FRONTEND\MenuPan.Designer.cs">
       <DependentUpon>MenuPan.cs</DependentUpon>
     </Compile>
     <Compile Include="MODELOS\Categoria.cs" />
@@ -155,54 +155,54 @@
     <Compile Include="MODELOS\Orden.cs" />
     <Compile Include="MODELOS\Producto.cs" />
     <Compile Include="MODELOS\Usuario.cs" />
-    <Compile Include="RegistrarEmpleado.cs">
+    <Compile Include="FRONTEND\RegistrarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrarEmpleado.Designer.cs">
+    <Compile Include="FRONTEND\RegistrarEmpleado.Designer.cs">
       <DependentUpon>RegistrarEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="FRONTEND\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="FRONTEND\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReporteCambios.cs">
+    <Compile Include="FRONTEND\ReporteCambios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReporteCambios.Designer.cs">
+    <Compile Include="FRONTEND\ReporteCambios.Designer.cs">
       <DependentUpon>ReporteCambios.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReporteVentas.cs">
+    <Compile Include="FRONTEND\ReporteVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReporteVentas.Designer.cs">
+    <Compile Include="FRONTEND\ReporteVentas.Designer.cs">
       <DependentUpon>ReporteVentas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Agregarcategoria.resx">
+    <EmbeddedResource Include="FRONTEND\Agregarcategoria.resx">
       <DependentUpon>Agregarcategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarProducto.resx">
+    <EmbeddedResource Include="FRONTEND\AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarDatosEmpleado.resx">
+    <EmbeddedResource Include="FRONTEND\EditarDatosEmpleado.resx">
       <DependentUpon>EditarDatosEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarEmpleado.resx">
+    <EmbeddedResource Include="FRONTEND\EditarEmpleado.resx">
       <DependentUpon>EditarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarProducto.resx">
+    <EmbeddedResource Include="FRONTEND\EditarProducto.resx">
       <DependentUpon>EditarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="FRONTEND\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="FRONTEND\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuPan.resx">
+    <EmbeddedResource Include="FRONTEND\MenuPan.resx">
       <DependentUpon>MenuPan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -215,16 +215,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RegistrarEmpleado.resx">
+    <EmbeddedResource Include="FRONTEND\RegistrarEmpleado.resx">
       <DependentUpon>RegistrarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteCambios.resx">
+    <EmbeddedResource Include="FRONTEND\ReporteCambios.resx">
       <DependentUpon>ReporteCambios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteVentas.resx">
+    <EmbeddedResource Include="FRONTEND\ReporteVentas.resx">
       <DependentUpon>ReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ticket.resx">
+    <EmbeddedResource Include="FRONTEND\Ticket.resx">
       <DependentUpon>Ticket.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
