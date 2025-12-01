@@ -130,7 +130,7 @@
       <DependentUpon>EditarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="BACKEND\ConectionDB.cs" />
-    <Compile Include="FRONTEND\Helpers\EstilosUI.cs" />
+    <Compile Include="FRONTEND\HELPERS\EstilosUI.cs" />
     <Compile Include="FRONTEND\Ticket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +155,7 @@
     <Compile Include="MODELOS\ITEMS\ReporteVentaItem.cs" />
     <Compile Include="MODELOS\Orden.cs" />
     <Compile Include="MODELOS\Producto.cs" />
+    <Compile Include="MODELOS\Sesion.cs" />
     <Compile Include="MODELOS\Usuario.cs" />
     <Compile Include="FRONTEND\RegistrarEmpleado.cs">
       <SubType>Form</SubType>

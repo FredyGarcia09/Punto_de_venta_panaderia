@@ -234,5 +234,44 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
                 }
             }
         }
+
+        public Usuario Login(string user, string passTextoPlano)
+        {
+            using (MySqlConnection conn = conexion.ObtenerConexion())
+            {
+                try
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand("sp_ValidarLogin", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("p_User", user);
+
+                        // Encriptar contraseña
+                        string passHash = EncriptarPass(passTextoPlano);
+                        cmd.Parameters.AddWithValue("p_Pass", passHash);
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                Usuario u = new Usuario();
+                                u.IdUsuario = Convert.ToInt32(reader["IdUsuario"]);
+                                u.Nombre = reader["nombre"].ToString();
+                                u.Apellidos = reader["apellidos"].ToString();
+                                u.UsuarioAcceso = reader["usuario"].ToString();
+                                u.TipoUsuario = reader["tipoUsuario"].ToString();
+                                return u;
+                            }
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+            }
+            return null; // No se encontro
+        }
     }
 }
