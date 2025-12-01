@@ -68,7 +68,7 @@
             this.btnRegresar.Location = new System.Drawing.Point(18, 0);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(63, 61);
-            this.btnRegresar.TabIndex = 3;
+            this.btnRegresar.TabIndex = 0;
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -118,7 +118,7 @@
             this.dtpInicio.Location = new System.Drawing.Point(173, 132);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(310, 24);
-            this.dtpInicio.TabIndex = 7;
+            this.dtpInicio.TabIndex = 0;
             this.dtpInicio.ValueChanged += new System.EventHandler(this.dtpInicio_ValueChanged);
             // 
             // dtpFin
@@ -127,7 +127,7 @@
             this.dtpFin.Location = new System.Drawing.Point(848, 134);
             this.dtpFin.Name = "dtpFin";
             this.dtpFin.Size = new System.Drawing.Size(310, 24);
-            this.dtpFin.TabIndex = 8;
+            this.dtpFin.TabIndex = 1;
             this.dtpFin.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // ReporteVentas
@@ -145,6 +145,7 @@
             this.Controls.Add(this.dgvVentas);
             this.Name = "ReporteVentas";
             this.Text = "ReporteVentas";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.ReporteVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
             this.groupBox1.ResumeLayout(false);

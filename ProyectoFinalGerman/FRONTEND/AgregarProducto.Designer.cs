@@ -32,6 +32,7 @@
             this.btnRegresar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.rtbDescripcionProducto = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnAgregarCategoria = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
@@ -105,15 +105,25 @@
             this.groupBox3.Location = new System.Drawing.Point(33, 144);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(938, 375);
-            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(242, 119);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(20, 22);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "$";
             // 
             // rtbDescripcionProducto
             // 
             this.rtbDescripcionProducto.Location = new System.Drawing.Point(236, 257);
             this.rtbDescripcionProducto.Name = "rtbDescripcionProducto";
             this.rtbDescripcionProducto.Size = new System.Drawing.Size(642, 92);
-            this.rtbDescripcionProducto.TabIndex = 15;
+            this.rtbDescripcionProducto.TabIndex = 7;
             this.rtbDescripcionProducto.Text = "";
             // 
             // label6
@@ -132,7 +142,7 @@
             this.btnAgregarCategoria.Location = new System.Drawing.Point(641, 177);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
             this.btnAgregarCategoria.Size = new System.Drawing.Size(206, 37);
-            this.btnAgregarCategoria.TabIndex = 13;
+            this.btnAgregarCategoria.TabIndex = 5;
             this.btnAgregarCategoria.Text = "Agregar Categoria.";
             this.btnAgregarCategoria.UseVisualStyleBackColor = true;
             this.btnAgregarCategoria.Click += new System.EventHandler(this.button1_Click_1);
@@ -155,7 +165,7 @@
             this.cboCategoria.Location = new System.Drawing.Point(238, 183);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(313, 30);
-            this.cboCategoria.TabIndex = 11;
+            this.cboCategoria.TabIndex = 3;
             // 
             // txtCantidad
             // 
@@ -163,7 +173,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(689, 99);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 28);
-            this.txtCantidad.TabIndex = 10;
+            this.txtCantidad.TabIndex = 4;
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
@@ -185,7 +195,7 @@
             this.btnAgregarFoto.Location = new System.Drawing.Point(73, 281);
             this.btnAgregarFoto.Name = "btnAgregarFoto";
             this.btnAgregarFoto.Size = new System.Drawing.Size(74, 50);
-            this.btnAgregarFoto.TabIndex = 4;
+            this.btnAgregarFoto.TabIndex = 6;
             this.btnAgregarFoto.UseVisualStyleBackColor = false;
             this.btnAgregarFoto.Click += new System.EventHandler(this.btnAgregarFoto_Click);
             // 
@@ -195,7 +205,7 @@
             this.txtPrecioProducto.Location = new System.Drawing.Point(268, 118);
             this.txtPrecioProducto.Name = "txtPrecioProducto";
             this.txtPrecioProducto.Size = new System.Drawing.Size(283, 28);
-            this.txtPrecioProducto.TabIndex = 8;
+            this.txtPrecioProducto.TabIndex = 0;
             this.txtPrecioProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // txtNombreProducto
@@ -204,7 +214,7 @@
             this.txtNombreProducto.Location = new System.Drawing.Point(238, 55);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(313, 28);
-            this.txtNombreProducto.TabIndex = 7;
+            this.txtNombreProducto.TabIndex = 1;
             this.txtNombreProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // pbFoto
@@ -269,7 +279,7 @@
             this.label1.Location = new System.Drawing.Point(27, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(261, 32);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Agregar Producto.";
             // 
             // btnGuardar
@@ -279,19 +289,9 @@
             this.btnGuardar.Location = new System.Drawing.Point(466, 537);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 43);
-            this.btnGuardar.TabIndex = 5;
+            this.btnGuardar.TabIndex = 1;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(242, 119);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(20, 22);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "$";
             // 
             // AgregarProducto
             // 
@@ -305,6 +305,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "AgregarProducto";
             this.Text = "AgregarProducto";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.AgregarProducto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
