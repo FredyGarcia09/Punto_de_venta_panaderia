@@ -65,7 +65,7 @@
             this.btnRegresar.Location = new System.Drawing.Point(11, 9);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(63, 61);
-            this.btnRegresar.TabIndex = 3;
+            this.btnRegresar.TabIndex = 0;
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
@@ -95,28 +95,28 @@
             this.clbProductos.Location = new System.Drawing.Point(7, 113);
             this.clbProductos.Name = "clbProductos";
             this.clbProductos.Size = new System.Drawing.Size(184, 514);
-            this.clbProductos.TabIndex = 4;
+            this.clbProductos.TabIndex = 0;
             // 
             // dtpMes1
             // 
             this.dtpMes1.Location = new System.Drawing.Point(514, 113);
             this.dtpMes1.Name = "dtpMes1";
             this.dtpMes1.Size = new System.Drawing.Size(200, 22);
-            this.dtpMes1.TabIndex = 5;
+            this.dtpMes1.TabIndex = 1;
             // 
             // dtpMes2
             // 
             this.dtpMes2.Location = new System.Drawing.Point(956, 117);
             this.dtpMes2.Name = "dtpMes2";
             this.dtpMes2.Size = new System.Drawing.Size(200, 22);
-            this.dtpMes2.TabIndex = 6;
+            this.dtpMes2.TabIndex = 2;
             // 
             // btnComparar
             // 
             this.btnComparar.Location = new System.Drawing.Point(1399, 113);
             this.btnComparar.Name = "btnComparar";
             this.btnComparar.Size = new System.Drawing.Size(119, 35);
-            this.btnComparar.TabIndex = 7;
+            this.btnComparar.TabIndex = 3;
             this.btnComparar.Text = "Comparar";
             this.btnComparar.UseVisualStyleBackColor = true;
             this.btnComparar.Click += new System.EventHandler(this.btnComparar_Click);
@@ -163,6 +163,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ReporteCambios";
             this.Text = "ReporteCambios";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.ReporteCambios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

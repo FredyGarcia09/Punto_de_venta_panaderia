@@ -31,8 +31,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvAuditoriaProductos = new System.Windows.Forms.DataGridView();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.dgvAuditoriaProductos = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuditoriaProductos)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +42,7 @@
             this.groupBox2.Location = new System.Drawing.Point(1, 632);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1227, 78);
-            this.groupBox2.TabIndex = 71;
+            this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
             // label1
@@ -53,7 +53,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(342, 36);
-            this.label1.TabIndex = 70;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Auditoría de Productos";
             // 
             // groupBox1
@@ -64,18 +64,8 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1237, 100);
-            this.groupBox1.TabIndex = 69;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            // 
-            // dgvAuditoriaProductos
-            // 
-            this.dgvAuditoriaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAuditoriaProductos.Location = new System.Drawing.Point(30, 156);
-            this.dgvAuditoriaProductos.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvAuditoriaProductos.Name = "dgvAuditoriaProductos";
-            this.dgvAuditoriaProductos.RowHeadersWidth = 51;
-            this.dgvAuditoriaProductos.Size = new System.Drawing.Size(1163, 456);
-            this.dgvAuditoriaProductos.TabIndex = 68;
             // 
             // btnRegresar
             // 
@@ -89,6 +79,16 @@
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // dgvAuditoriaProductos
+            // 
+            this.dgvAuditoriaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAuditoriaProductos.Location = new System.Drawing.Point(30, 156);
+            this.dgvAuditoriaProductos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvAuditoriaProductos.Name = "dgvAuditoriaProductos";
+            this.dgvAuditoriaProductos.RowHeadersWidth = 51;
+            this.dgvAuditoriaProductos.Size = new System.Drawing.Size(1163, 456);
+            this.dgvAuditoriaProductos.TabIndex = 1;
+            // 
             // AuditoriaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -100,6 +100,7 @@
             this.Controls.Add(this.dgvAuditoriaProductos);
             this.Name = "AuditoriaProductos";
             this.Text = "AuditoriaProductos";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.AuditoriaProductos_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuditoriaProductos)).EndInit();

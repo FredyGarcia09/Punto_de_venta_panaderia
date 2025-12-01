@@ -263,7 +263,7 @@ namespace ProyectoFinalGerman
             this.txtEfectivo.Location = new System.Drawing.Point(155, 702);
             this.txtEfectivo.Name = "txtEfectivo";
             this.txtEfectivo.Size = new System.Drawing.Size(100, 22);
-            this.txtEfectivo.TabIndex = 23;
+            this.txtEfectivo.TabIndex = 0;
             this.txtEfectivo.TextChanged += new System.EventHandler(this.txtEfectivo_TextChanged_1);
             this.txtEfectivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEfectivo_KeyPress);
             // 
@@ -273,7 +273,7 @@ namespace ProyectoFinalGerman
             this.btnRegresa.Location = new System.Drawing.Point(12, 891);
             this.btnRegresa.Name = "btnRegresa";
             this.btnRegresa.Size = new System.Drawing.Size(57, 44);
-            this.btnRegresa.TabIndex = 25;
+            this.btnRegresa.TabIndex = 1;
             this.btnRegresa.UseVisualStyleBackColor = true;
             this.btnRegresa.Click += new System.EventHandler(this.btnRegresa_Click);
             // 
@@ -283,7 +283,7 @@ namespace ProyectoFinalGerman
             this.btnImprimir.Location = new System.Drawing.Point(752, 881);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(64, 44);
-            this.btnImprimir.TabIndex = 24;
+            this.btnImprimir.TabIndex = 2;
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
@@ -329,6 +329,7 @@ namespace ProyectoFinalGerman
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Ticket";
             this.Text = "Ticket";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Ticket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTicket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

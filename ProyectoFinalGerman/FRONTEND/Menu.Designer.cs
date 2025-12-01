@@ -30,6 +30,7 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAuditoriaProd = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnAdministrarUsuarios = new System.Windows.Forms.Button();
             this.btnRegistrarVenta = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAuditoriaProd = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -82,6 +82,22 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
+            // btnAuditoriaProd
+            // 
+            this.btnAuditoriaProd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAuditoriaProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAuditoriaProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAuditoriaProd.Image = global::ProyectoFinalGerman.Properties.Resources.ReAdmin;
+            this.btnAuditoriaProd.Location = new System.Drawing.Point(26, 514);
+            this.btnAuditoriaProd.Name = "btnAuditoriaProd";
+            this.btnAuditoriaProd.Size = new System.Drawing.Size(269, 50);
+            this.btnAuditoriaProd.TabIndex = 8;
+            this.btnAuditoriaProd.Text = "Auditoría de Productos";
+            this.btnAuditoriaProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAuditoriaProd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAuditoriaProd.UseVisualStyleBackColor = false;
+            this.btnAuditoriaProd.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
@@ -99,7 +115,7 @@
             this.btnAdministrarUsuarios.Location = new System.Drawing.Point(26, 346);
             this.btnAdministrarUsuarios.Name = "btnAdministrarUsuarios";
             this.btnAdministrarUsuarios.Size = new System.Drawing.Size(269, 50);
-            this.btnAdministrarUsuarios.TabIndex = 12;
+            this.btnAdministrarUsuarios.TabIndex = 5;
             this.btnAdministrarUsuarios.Text = "Administrar Empleados";
             this.btnAdministrarUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdministrarUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -115,7 +131,7 @@
             this.btnRegistrarVenta.Location = new System.Drawing.Point(26, 122);
             this.btnRegistrarVenta.Name = "btnRegistrarVenta";
             this.btnRegistrarVenta.Size = new System.Drawing.Size(269, 50);
-            this.btnRegistrarVenta.TabIndex = 4;
+            this.btnRegistrarVenta.TabIndex = 1;
             this.btnRegistrarVenta.Text = "Registrar Venta/Caja";
             this.btnRegistrarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrarVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -150,7 +166,7 @@
             this.btnReporteVentas.Location = new System.Drawing.Point(26, 402);
             this.btnReporteVentas.Name = "btnReporteVentas";
             this.btnReporteVentas.Size = new System.Drawing.Size(269, 50);
-            this.btnReporteVentas.TabIndex = 9;
+            this.btnReporteVentas.TabIndex = 6;
             this.btnReporteVentas.Text = "Reporte de Ventas";
             this.btnReporteVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReporteVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -166,7 +182,7 @@
             this.btnEditarProducto.Location = new System.Drawing.Point(26, 234);
             this.btnEditarProducto.Name = "btnEditarProducto";
             this.btnEditarProducto.Size = new System.Drawing.Size(269, 50);
-            this.btnEditarProducto.TabIndex = 8;
+            this.btnEditarProducto.TabIndex = 3;
             this.btnEditarProducto.Text = "  Editar   Productos";
             this.btnEditarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -182,7 +198,7 @@
             this.btnAgregarProducto.Location = new System.Drawing.Point(26, 178);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(269, 50);
-            this.btnAgregarProducto.TabIndex = 6;
+            this.btnAgregarProducto.TabIndex = 2;
             this.btnAgregarProducto.Text = "   Agregar  Productos";
             this.btnAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -198,7 +214,7 @@
             this.btnReporteCambios.Location = new System.Drawing.Point(26, 458);
             this.btnReporteCambios.Name = "btnReporteCambios";
             this.btnReporteCambios.Size = new System.Drawing.Size(269, 50);
-            this.btnReporteCambios.TabIndex = 5;
+            this.btnReporteCambios.TabIndex = 7;
             this.btnReporteCambios.Text = "Reporte de Cambios";
             this.btnReporteCambios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReporteCambios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -214,7 +230,7 @@
             this.btnRegistrarEmpleado.Location = new System.Drawing.Point(26, 290);
             this.btnRegistrarEmpleado.Name = "btnRegistrarEmpleado";
             this.btnRegistrarEmpleado.Size = new System.Drawing.Size(269, 50);
-            this.btnRegistrarEmpleado.TabIndex = 2;
+            this.btnRegistrarEmpleado.TabIndex = 4;
             this.btnRegistrarEmpleado.Text = "Registrar Empleado";
             this.btnRegistrarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -231,7 +247,7 @@
             this.btnCerrar.Location = new System.Drawing.Point(244, 25);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(51, 46);
-            this.btnCerrar.TabIndex = 1;
+            this.btnCerrar.TabIndex = 0;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
@@ -277,22 +293,6 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // btnAuditoriaProd
-            // 
-            this.btnAuditoriaProd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAuditoriaProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAuditoriaProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAuditoriaProd.Image = global::ProyectoFinalGerman.Properties.Resources.ReAdmin;
-            this.btnAuditoriaProd.Location = new System.Drawing.Point(26, 514);
-            this.btnAuditoriaProd.Name = "btnAuditoriaProd";
-            this.btnAuditoriaProd.Size = new System.Drawing.Size(269, 50);
-            this.btnAuditoriaProd.TabIndex = 14;
-            this.btnAuditoriaProd.Text = "Auditoría de Productos";
-            this.btnAuditoriaProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAuditoriaProd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAuditoriaProd.UseVisualStyleBackColor = false;
-            this.btnAuditoriaProd.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -304,6 +304,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "Menu";
             this.Text = "Menu";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Load);
             this.groupBox2.ResumeLayout(false);

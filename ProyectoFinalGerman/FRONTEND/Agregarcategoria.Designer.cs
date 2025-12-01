@@ -45,7 +45,7 @@
             this.groupBox1.Location = new System.Drawing.Point(0, -8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1016, 86);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // btnRegresar
@@ -64,7 +64,7 @@
             this.groupBox2.Location = new System.Drawing.Point(0, 467);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1086, 73);
-            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
             // txtNombreCategoria
@@ -73,7 +73,7 @@
             this.txtNombreCategoria.Location = new System.Drawing.Point(118, 145);
             this.txtNombreCategoria.Name = "txtNombreCategoria";
             this.txtNombreCategoria.Size = new System.Drawing.Size(367, 28);
-            this.txtNombreCategoria.TabIndex = 4;
+            this.txtNombreCategoria.TabIndex = 1;
             this.txtNombreCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress_1);
             // 
             // label1
@@ -83,7 +83,7 @@
             this.label1.Location = new System.Drawing.Point(115, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(275, 22);
-            this.label1.TabIndex = 6;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Agrega el nombre de la categoria";
             // 
             // label2
@@ -93,7 +93,7 @@
             this.label2.Location = new System.Drawing.Point(115, 186);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(283, 22);
-            this.label2.TabIndex = 7;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Agrega una descripcion (opcional)";
             // 
             // rtbDescripcionCategoria
@@ -101,7 +101,7 @@
             this.rtbDescripcionCategoria.Location = new System.Drawing.Point(118, 226);
             this.rtbDescripcionCategoria.Name = "rtbDescripcionCategoria";
             this.rtbDescripcionCategoria.Size = new System.Drawing.Size(367, 116);
-            this.rtbDescripcionCategoria.TabIndex = 8;
+            this.rtbDescripcionCategoria.TabIndex = 2;
             this.rtbDescripcionCategoria.Text = "";
             this.rtbDescripcionCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBox1_KeyPress);
             // 
@@ -112,7 +112,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(257, 378);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 56);
-            this.btnGuardar.TabIndex = 9;
+            this.btnGuardar.TabIndex = 3;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -130,6 +130,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Agregarcategoria";
             this.Text = "Agregarcategoria";
+            this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

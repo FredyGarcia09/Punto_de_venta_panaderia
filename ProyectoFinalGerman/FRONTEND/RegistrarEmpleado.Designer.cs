@@ -219,7 +219,7 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(493, 28);
-            this.txtNombre.TabIndex = 14;
+            this.txtNombre.TabIndex = 0;
             // 
             // txtApellido
             // 
@@ -231,7 +231,7 @@
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(493, 28);
-            this.txtApellido.TabIndex = 15;
+            this.txtApellido.TabIndex = 2;
             // 
             // txtUsuario
             // 
@@ -243,7 +243,7 @@
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(493, 28);
-            this.txtUsuario.TabIndex = 16;
+            this.txtUsuario.TabIndex = 4;
             // 
             // txtContrasenha
             // 
@@ -256,7 +256,7 @@
             this.txtContrasenha.Name = "txtContrasenha";
             this.txtContrasenha.PasswordChar = '*';
             this.txtContrasenha.Size = new System.Drawing.Size(493, 28);
-            this.txtContrasenha.TabIndex = 17;
+            this.txtContrasenha.TabIndex = 6;
             // 
             // txtRFC
             // 
@@ -268,7 +268,7 @@
             this.txtRFC.Margin = new System.Windows.Forms.Padding(4);
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(493, 28);
-            this.txtRFC.TabIndex = 18;
+            this.txtRFC.TabIndex = 7;
             // 
             // txtCURP
             // 
@@ -280,7 +280,7 @@
             this.txtCURP.Margin = new System.Windows.Forms.Padding(4);
             this.txtCURP.Name = "txtCURP";
             this.txtCURP.Size = new System.Drawing.Size(493, 28);
-            this.txtCURP.TabIndex = 19;
+            this.txtCURP.TabIndex = 9;
             // 
             // txtEmail
             // 
@@ -292,7 +292,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(493, 28);
-            this.txtEmail.TabIndex = 20;
+            this.txtEmail.TabIndex = 1;
             // 
             // txtNSS
             // 
@@ -304,7 +304,7 @@
             this.txtNSS.Margin = new System.Windows.Forms.Padding(4);
             this.txtNSS.Name = "txtNSS";
             this.txtNSS.Size = new System.Drawing.Size(493, 28);
-            this.txtNSS.TabIndex = 21;
+            this.txtNSS.TabIndex = 5;
             // 
             // txtDireccion
             // 
@@ -316,7 +316,7 @@
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(493, 28);
-            this.txtDireccion.TabIndex = 22;
+            this.txtDireccion.TabIndex = 3;
             // 
             // txtTelefono1
             // 
@@ -328,7 +328,7 @@
             this.txtTelefono1.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono1.Name = "txtTelefono1";
             this.txtTelefono1.Size = new System.Drawing.Size(493, 28);
-            this.txtTelefono1.TabIndex = 23;
+            this.txtTelefono1.TabIndex = 10;
             // 
             // txtTelefono2
             // 
@@ -340,7 +340,7 @@
             this.txtTelefono2.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono2.Name = "txtTelefono2";
             this.txtTelefono2.Size = new System.Drawing.Size(493, 28);
-            this.txtTelefono2.TabIndex = 24;
+            this.txtTelefono2.TabIndex = 12;
             // 
             // groupBox1
             // 
@@ -382,7 +382,7 @@
             this.cboTipoSangre.Location = new System.Drawing.Point(632, 484);
             this.cboTipoSangre.Name = "cboTipoSangre";
             this.cboTipoSangre.Size = new System.Drawing.Size(493, 30);
-            this.cboTipoSangre.TabIndex = 30;
+            this.cboTipoSangre.TabIndex = 11;
             // 
             // label14
             // 
@@ -406,7 +406,7 @@
             this.cboTipoUsuario.Location = new System.Drawing.Point(632, 541);
             this.cboTipoUsuario.Name = "cboTipoUsuario";
             this.cboTipoUsuario.Size = new System.Drawing.Size(493, 30);
-            this.cboTipoUsuario.TabIndex = 32;
+            this.cboTipoUsuario.TabIndex = 13;
             // 
             // btnRegistrarUsuario
             // 
@@ -419,7 +419,7 @@
             this.btnRegistrarUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
             this.btnRegistrarUsuario.Size = new System.Drawing.Size(301, 60);
-            this.btnRegistrarUsuario.TabIndex = 13;
+            this.btnRegistrarUsuario.TabIndex = 14;
             this.btnRegistrarUsuario.Text = "         Registrar Usuario";
             this.btnRegistrarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistrarUsuario.UseVisualStyleBackColor = false;
@@ -444,7 +444,7 @@
             this.txtConfirmarContrasenha.Name = "txtConfirmarContrasenha";
             this.txtConfirmarContrasenha.PasswordChar = '*';
             this.txtConfirmarContrasenha.Size = new System.Drawing.Size(493, 28);
-            this.txtConfirmarContrasenha.TabIndex = 35;
+            this.txtConfirmarContrasenha.TabIndex = 8;
             // 
             // label15
             // 
@@ -498,6 +498,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegistrarEmpleado";
             this.Text = " ";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.RegistrarEmpleado_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

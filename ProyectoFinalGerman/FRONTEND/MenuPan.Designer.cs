@@ -120,7 +120,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(1148, 217);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(97, 62);
-            this.btnGuardar.TabIndex = 22;
+            this.btnGuardar.TabIndex = 1;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -131,7 +131,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(1148, 111);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(97, 55);
-            this.btnEliminar.TabIndex = 21;
+            this.btnEliminar.TabIndex = 0;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -160,6 +160,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "MenuPan";
             this.Text = "MenuPan";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.MenuPan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
