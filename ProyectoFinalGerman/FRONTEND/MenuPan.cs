@@ -22,14 +22,14 @@ namespace ProyectoFinalGerman
         {
             InitializeComponent();
             groupBox1.BackColor = ColorTranslator.FromHtml("#C9C7B6");
-            groupBox3.BackColor = ColorTranslator.FromHtml("#D7BFA8");
+            groupBox3.BackColor = ColorTranslator.FromHtml("#C9C7B6");
             groupBox2.BackColor = ColorTranslator.FromHtml("#C89B84");
             flpMenuPrincipal.BackColor = EstilosUI.ColorFondoGrid;
             btnMenu.FlatAppearance.BorderSize = 0;
             btnEliminar.FlatAppearance.BorderSize = 0;
             btnGuardar.FlatAppearance.BorderSize = 0;
+            
 
-            // PRUEBA EN EL PANEL NUEVO
             ControlProducto prueba = new ControlProducto();
             prueba.BackColor = Color.Red;
             prueba.Size = new Size(150, 200);
@@ -171,7 +171,7 @@ namespace ProyectoFinalGerman
                     flpGridProductos.AutoSize = true;
                     flpGridProductos.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                     flpGridProductos.Width = anchoDisponible;
-                    flpGridProductos.BackColor = EstilosUI.ColorSeleccion;
+                    flpGridProductos.BackColor = EstilosUI.ColorFondoGrid; ;
                     flpGridProductos.Padding = new Padding(10);
 
                     
@@ -208,6 +208,7 @@ namespace ProyectoFinalGerman
                 string nombre = tarjeta.Nombre;
                 decimal precio = tarjeta.Precio;
                 bool existe = false;
+                tarjeta.BackColor = EstilosUI.ColorFondoGrid;
 
                 // Buscamos si ya existe en el Grid para sumar cantidad
                 foreach (DataGridViewRow fila in dataGridView1.Rows)

@@ -1,4 +1,5 @@
 ﻿using ProyectoFinalGerman.BACKEND.DAOs;
+using ProyectoFinalGerman.FRONTEND.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,8 @@ namespace ProyectoFinalGerman
             groupBox2.BackColor = ColorTranslator.FromHtml("#E9CEBB");
             groupBox1.BackColor = ColorTranslator.FromHtml("#A8B29B");
             btnRegresar.FlatAppearance.BorderSize = 0;
-            
+            EstilosUI.AplicarEstiloGrid(dgvDatos);
+
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

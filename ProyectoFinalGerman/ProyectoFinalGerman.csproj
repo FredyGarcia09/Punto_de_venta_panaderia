@@ -339,5 +339,8 @@
   <ItemGroup>
     <None Include="Resources\Imprimir.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Script_Examen_PVPanaderia.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

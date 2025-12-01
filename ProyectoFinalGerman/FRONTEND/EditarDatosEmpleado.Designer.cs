@@ -102,7 +102,7 @@ namespace ProyectoFinalGerman
             this.txtConfirmarContrasenha.Name = "txtConfirmarContrasenha";
             this.txtConfirmarContrasenha.PasswordChar = '*';
             this.txtConfirmarContrasenha.Size = new System.Drawing.Size(493, 28);
-            this.txtConfirmarContrasenha.TabIndex = 4;
+            this.txtConfirmarContrasenha.TabIndex = 8;
             // 
             // label15
             // 
@@ -160,7 +160,7 @@ namespace ProyectoFinalGerman
             this.cboTipoSangre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboTipoSangre.Name = "cboTipoSangre";
             this.cboTipoSangre.Size = new System.Drawing.Size(493, 30);
-            this.cboTipoSangre.TabIndex = 12;
+            this.cboTipoSangre.TabIndex = 11;
             // 
             // txtTelefono2
             // 
@@ -172,7 +172,7 @@ namespace ProyectoFinalGerman
             this.txtTelefono2.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono2.Name = "txtTelefono2";
             this.txtTelefono2.Size = new System.Drawing.Size(493, 28);
-            this.txtTelefono2.TabIndex = 6;
+            this.txtTelefono2.TabIndex = 12;
             // 
             // txtTelefono1
             // 
@@ -184,7 +184,7 @@ namespace ProyectoFinalGerman
             this.txtTelefono1.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono1.Name = "txtTelefono1";
             this.txtTelefono1.Size = new System.Drawing.Size(493, 28);
-            this.txtTelefono1.TabIndex = 5;
+            this.txtTelefono1.TabIndex = 10;
             // 
             // txtDireccion
             // 
@@ -196,7 +196,7 @@ namespace ProyectoFinalGerman
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(493, 28);
-            this.txtDireccion.TabIndex = 8;
+            this.txtDireccion.TabIndex = 3;
             // 
             // txtNSS
             // 
@@ -208,7 +208,7 @@ namespace ProyectoFinalGerman
             this.txtNSS.Margin = new System.Windows.Forms.Padding(4);
             this.txtNSS.Name = "txtNSS";
             this.txtNSS.Size = new System.Drawing.Size(493, 28);
-            this.txtNSS.TabIndex = 9;
+            this.txtNSS.TabIndex = 5;
             // 
             // txtEmail
             // 
@@ -220,7 +220,7 @@ namespace ProyectoFinalGerman
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(493, 28);
-            this.txtEmail.TabIndex = 7;
+            this.txtEmail.TabIndex = 1;
             // 
             // txtCURP
             // 
@@ -232,7 +232,7 @@ namespace ProyectoFinalGerman
             this.txtCURP.Margin = new System.Windows.Forms.Padding(4);
             this.txtCURP.Name = "txtCURP";
             this.txtCURP.Size = new System.Drawing.Size(493, 28);
-            this.txtCURP.TabIndex = 11;
+            this.txtCURP.TabIndex = 9;
             // 
             // txtRFC
             // 
@@ -244,7 +244,7 @@ namespace ProyectoFinalGerman
             this.txtRFC.Margin = new System.Windows.Forms.Padding(4);
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(493, 28);
-            this.txtRFC.TabIndex = 10;
+            this.txtRFC.TabIndex = 7;
             // 
             // txtContrasenha
             // 
@@ -257,7 +257,7 @@ namespace ProyectoFinalGerman
             this.txtContrasenha.Name = "txtContrasenha";
             this.txtContrasenha.PasswordChar = '*';
             this.txtContrasenha.Size = new System.Drawing.Size(493, 28);
-            this.txtContrasenha.TabIndex = 3;
+            this.txtContrasenha.TabIndex = 6;
             // 
             // txtUsuario
             // 
@@ -270,7 +270,7 @@ namespace ProyectoFinalGerman
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(493, 28);
-            this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.TabIndex = 4;
             // 
             // txtApellido
             // 
@@ -282,7 +282,7 @@ namespace ProyectoFinalGerman
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(493, 28);
-            this.txtApellido.TabIndex = 1;
+            this.txtApellido.TabIndex = 2;
             // 
             // txtNombre
             // 

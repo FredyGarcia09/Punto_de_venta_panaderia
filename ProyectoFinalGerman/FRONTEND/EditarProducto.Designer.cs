@@ -132,14 +132,14 @@
             this.cboCategoria.Location = new System.Drawing.Point(237, 201);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(313, 30);
-            this.cboCategoria.TabIndex = 2;
+            this.cboCategoria.TabIndex = 6;
             // 
             // rtbDescripcionProducto
             // 
             this.rtbDescripcionProducto.Location = new System.Drawing.Point(237, 268);
             this.rtbDescripcionProducto.Name = "rtbDescripcionProducto";
             this.rtbDescripcionProducto.Size = new System.Drawing.Size(642, 92);
-            this.rtbDescripcionProducto.TabIndex = 6;
+            this.rtbDescripcionProducto.TabIndex = 8;
             this.rtbDescripcionProducto.Text = "";
             // 
             // label6
@@ -158,7 +158,7 @@
             this.btnCambiarEstado.Location = new System.Drawing.Point(689, 160);
             this.btnCambiarEstado.Name = "btnCambiarEstado";
             this.btnCambiarEstado.Size = new System.Drawing.Size(141, 33);
-            this.btnCambiarEstado.TabIndex = 4;
+            this.btnCambiarEstado.TabIndex = 5;
             this.btnCambiarEstado.Text = "Cambiar Estado";
             this.btnCambiarEstado.UseVisualStyleBackColor = true;
             this.btnCambiarEstado.Click += new System.EventHandler(this.btnCambiarEstado_Click);
@@ -171,7 +171,7 @@
             this.btnRestar.Location = new System.Drawing.Point(655, 77);
             this.btnRestar.Name = "btnRestar";
             this.btnRestar.Size = new System.Drawing.Size(55, 42);
-            this.btnRestar.TabIndex = 17;
+            this.btnRestar.TabIndex = 1;
             this.btnRestar.Text = "-";
             this.btnRestar.UseVisualStyleBackColor = true;
             this.btnRestar.Click += new System.EventHandler(this.btnRestar_Click);
@@ -184,7 +184,7 @@
             this.btnSumar.Location = new System.Drawing.Point(822, 79);
             this.btnSumar.Name = "btnSumar";
             this.btnSumar.Size = new System.Drawing.Size(57, 42);
-            this.btnSumar.TabIndex = 16;
+            this.btnSumar.TabIndex = 3;
             this.btnSumar.Text = "+";
             this.btnSumar.UseVisualStyleBackColor = true;
             this.btnSumar.Click += new System.EventHandler(this.btnSumar_Click);
@@ -197,7 +197,7 @@
             this.btnAgregarFoto.Location = new System.Drawing.Point(82, 276);
             this.btnAgregarFoto.Name = "btnAgregarFoto";
             this.btnAgregarFoto.Size = new System.Drawing.Size(74, 50);
-            this.btnAgregarFoto.TabIndex = 5;
+            this.btnAgregarFoto.TabIndex = 7;
             this.btnAgregarFoto.UseVisualStyleBackColor = false;
             this.btnAgregarFoto.Click += new System.EventHandler(this.btnAgregarFoto_Click);
             // 
@@ -207,7 +207,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(716, 88);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 28);
-            this.txtCantidad.TabIndex = 3;
+            this.txtCantidad.TabIndex = 2;
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
@@ -227,7 +227,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(268, 133);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(283, 28);
-            this.txtPrecio.TabIndex = 1;
+            this.txtPrecio.TabIndex = 4;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // txtNombre
@@ -304,7 +304,7 @@
             this.btnBorrar.Location = new System.Drawing.Point(321, 563);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(75, 48);
-            this.btnBorrar.TabIndex = 1;
+            this.btnBorrar.TabIndex = 2;
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
@@ -315,7 +315,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(544, 563);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 46);
-            this.btnGuardar.TabIndex = 2;
+            this.btnGuardar.TabIndex = 3;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -325,7 +325,7 @@
             this.chkMostrarDescontinuados.Location = new System.Drawing.Point(804, 111);
             this.chkMostrarDescontinuados.Name = "chkMostrarDescontinuados";
             this.chkMostrarDescontinuados.Size = new System.Drawing.Size(162, 20);
-            this.chkMostrarDescontinuados.TabIndex = 18;
+            this.chkMostrarDescontinuados.TabIndex = 1;
             this.chkMostrarDescontinuados.Text = "Incluir descontinuados";
             this.chkMostrarDescontinuados.UseVisualStyleBackColor = true;
             this.chkMostrarDescontinuados.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);

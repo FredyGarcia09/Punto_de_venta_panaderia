@@ -39,11 +39,13 @@ namespace ProyectoFinalGerman
                 btnAdministrarUsuarios.Enabled = false;
                 btnReporteCambios.Enabled = false;
                 btnReporteVentas.Enabled = false;
+                btnAuditoriaProd.Enabled = false;
 
                 btnRegistrarEmpleado.Visible = false;
                 btnAdministrarUsuarios.Visible = false;
                 btnReporteCambios.Visible = false;
                 btnReporteVentas.Visible = false;
+                btnAuditoriaProd.Visible = false;
             }
         }
 

@@ -49,7 +49,7 @@
             this.dgvVentas.RowHeadersWidth = 51;
             this.dgvVentas.RowTemplate.Height = 24;
             this.dgvVentas.Size = new System.Drawing.Size(1125, 405);
-            this.dgvVentas.TabIndex = 0;
+            this.dgvVentas.TabIndex = 2;
             // 
             // groupBox1
             // 
