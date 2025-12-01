@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BACKEND\DAOs\AuditoriaDAO.cs" />
+    <Compile Include="BACKEND\DAOs\ReporteVentasPorProductoDAO.cs" />
     <Compile Include="FRONTEND\Agregarcategoria.cs">
       <SubType>Form</SubType>
     </Compile>

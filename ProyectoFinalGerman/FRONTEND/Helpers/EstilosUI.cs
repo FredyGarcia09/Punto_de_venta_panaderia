@@ -54,5 +54,32 @@ namespace ProyectoFinalGerman.FRONTEND.Helpers
             dgv.AllowUserToResizeRows = false;
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
+        public static void AplicarEstiloFecha(DateTimePicker dtp)
+        {
+            dtp.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+
+            dtp.Format = DateTimePickerFormat.Long;
+
+            // Colores
+            dtp.CalendarMonthBackground = Color.White;
+            dtp.CalendarTitleBackColor = Color.FromArgb(180, 130, 110);
+            dtp.CalendarTitleForeColor = Color.White;
+            dtp.CalendarTrailingForeColor = Color.Gray;
+            dtp.CalendarForeColor = Color.Black;
+        }
+
+
+        public static void FormatearMoneda(DataGridView dgv, params string[] columnas)
+        {
+            foreach (string col in columnas)
+            {
+                if (dgv.Columns.Contains(col))
+                {
+                    dgv.Columns[col].DefaultCellStyle.Format = "C2"; // Moneda $1,200.00
+                    dgv.Columns[col].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                }
+            }
+        }
     }
 }
