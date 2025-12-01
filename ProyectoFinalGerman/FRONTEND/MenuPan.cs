@@ -1,4 +1,5 @@
 ﻿using ProyectoFinalGerman.BACKEND.DAOs;
+using ProyectoFinalGerman.FRONTEND.Helpers;
 using ProyectoFinalGerman.MODELOS;
 using ProyectoFinalGerman.MODELOS.ITEMS;
 using System;
@@ -23,6 +24,7 @@ namespace ProyectoFinalGerman
             groupBox1.BackColor = ColorTranslator.FromHtml("#C9C7B6");
             groupBox3.BackColor = ColorTranslator.FromHtml("#D7BFA8");
             groupBox2.BackColor = ColorTranslator.FromHtml("#C89B84");
+            flpMenuPrincipal.BackColor = EstilosUI.ColorFondoGrid;
             btnMenu.FlatAppearance.BorderSize = 0;
             btnEliminar.FlatAppearance.BorderSize = 0;
             btnGuardar.FlatAppearance.BorderSize = 0;
@@ -32,8 +34,6 @@ namespace ProyectoFinalGerman
             prueba.BackColor = Color.Red;
             prueba.Size = new Size(150, 200);
 
-            // Si esto funciona, verás un cuadro rojo
-            flpMenuPrincipal.Controls.Add(prueba);
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -94,139 +94,142 @@ namespace ProyectoFinalGerman
         private void ConfigurarTablaCuenta()
         {
             dataGridView1.Columns.Clear();
-
             dataGridView1.Columns.Add("Id", "Id");
             dataGridView1.Columns.Add("Producto", "Producto");
             dataGridView1.Columns.Add("Precio", "Precio");
             dataGridView1.Columns.Add("Cantidad", "Cant.");
             dataGridView1.Columns.Add("Importe", "Importe");
+
             dataGridView1.Columns["Id"].Visible = false;
+
+            // Formato de moneda
+            dataGridView1.Columns["Precio"].DefaultCellStyle.Format = "C2";
+            dataGridView1.Columns["Importe"].DefaultCellStyle.Format = "C2";
+
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            EstilosUI.AplicarEstiloGrid(dataGridView1);
         }
 
         private void CargarMenuDinamico()
         {
-            // 1. Limpiar pantalla
+            // Panel principal
             flpMenuPrincipal.Controls.Clear();
-
-            // Configuración visual obligatoria
-            flpMenuPrincipal.FlowDirection = FlowDirection.TopDown;
-            flpMenuPrincipal.WrapContents = false;
+            flpMenuPrincipal.FlowDirection = FlowDirection.TopDown; // Lista vertical
+            flpMenuPrincipal.WrapContents = false; // No permitir que se pongan al lado
             flpMenuPrincipal.AutoScroll = true;
 
-            // 2. Obtener datos de la BD
-            List<Producto> listaProductos = null;
+            // Traer datos
+            List<Producto> listaProductos;
             try
             {
                 listaProductos = productoDAO.ObtenerProductosParaMenu();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al conectar: " + ex.Message);
+                MessageBox.Show("Error SQL: " + ex.Message);
                 return;
             }
 
-            if (listaProductos == null || listaProductos.Count == 0)
-            {
-                return; // No hay productos
-            }
+            if (listaProductos == null || listaProductos.Count == 0) return;
 
-            // --- VARIABLES DE CONTROL (TIENEN QUE ESTAR AFUERA DEL FOREACH) ---
+            // Variables de control
             string categoriaActual = "";
-            FlowLayoutPanel flpCuadricula = null;
+            FlowLayoutPanel flpGridProductos = null;
 
-            // ... dentro de CargarMenuDinamico ...
-
-            int contadorVisual = 0; // Para contar qué está pasando
-            int anchoDisponible = flpMenuPrincipal.ClientSize.Width - 25;
+            int anchoDisponible = flpMenuPrincipal.ClientSize.Width - 30;
 
             foreach (Producto prod in listaProductos)
             {
-                // A. CATEGORÍA
+                // Por categoria
                 if (prod.NombreCategoria != categoriaActual)
                 {
                     categoriaActual = prod.NombreCategoria;
 
-                    // Creamos el panel y lo pintamos de VERDE para verlo
-                    Panel pnlCategoria = new Panel();
-                    pnlCategoria.MinimumSize = new Size(500, 0);
-                    pnlCategoria.Width = flpMenuPrincipal.Width - 50; // Intentar ocupar todo el ancho
-                    pnlCategoria.AutoSize = true; // Que crezca hacia abajo (altura)
-                    pnlCategoria.Padding = new Padding(0, 0, 0, 20);
+                    FlowLayoutPanel flpContenedorCategoria = new FlowLayoutPanel();
+                    flpContenedorCategoria.FlowDirection = FlowDirection.TopDown;
+                    flpContenedorCategoria.AutoSize = true;
+                    flpContenedorCategoria.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                    flpContenedorCategoria.Width = anchoDisponible;
+                    flpContenedorCategoria.Margin = new Padding(0, 0, 0, 20); // Espacio entre categorías
 
-                    // Mantenemos el color verde para ver si ya se "infla"
-                    pnlCategoria.BackColor = Color.LightGreen;
-
+                    // Titulo
                     Label lblTitulo = new Label();
-                    lblTitulo.Text = categoriaActual.ToUpper();
-                    lblTitulo.Dock = DockStyle.Top;
-                    lblTitulo.Height = 30;
-                    lblTitulo.BackColor = Color.Yellow; // <--- COLOR DE PRUEBA
+                    lblTitulo.Text = "  " + categoriaActual.ToUpper();
+                    lblTitulo.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+                    lblTitulo.ForeColor = Color.DarkSlateGray;
+                    lblTitulo.BackColor = EstilosUI.ColorFondoGrid;
+                    lblTitulo.TextAlign = ContentAlignment.MiddleLeft;
+                    lblTitulo.Height = 40;
+                    lblTitulo.Width = anchoDisponible;
+                    lblTitulo.Margin = new Padding(0);
 
-                    flpCuadricula = new FlowLayoutPanel();
-                    flpCuadricula.FlowDirection = FlowDirection.LeftToRight;
-                    flpCuadricula.WrapContents = true;
-                    flpCuadricula.AutoSize = true;
-                    flpCuadricula.Dock = DockStyle.Top;
-                    flpCuadricula.BackColor = Color.Orange; // <--- COLOR DE PRUEBA
+                    // Productos
+                    flpGridProductos = new FlowLayoutPanel();
+                    flpGridProductos.FlowDirection = FlowDirection.LeftToRight; // Izquierda a Derecha
+                    flpGridProductos.WrapContents = true; // Que bajen si no caben
+                    flpGridProductos.AutoSize = true;
+                    flpGridProductos.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                    flpGridProductos.Width = anchoDisponible;
+                    flpGridProductos.BackColor = EstilosUI.ColorSeleccion;
+                    flpGridProductos.Padding = new Padding(10);
 
-                    pnlCategoria.Controls.Add(flpCuadricula);
-                    pnlCategoria.Controls.Add(lblTitulo);
+                    
+                    flpContenedorCategoria.Controls.Add(lblTitulo);
+                    flpContenedorCategoria.Controls.Add(flpGridProductos);
 
-                    // AGREGAMOS AL PANEL AZUL
-                    flpMenuPrincipal.Controls.Add(pnlCategoria);
+                    flpMenuPrincipal.Controls.Add(flpContenedorCategoria);
                 }
 
-                // B. PRODUCTO
+                // Tarjeta de producto
                 ControlProducto tarjeta = new ControlProducto();
                 tarjeta.CargarDatos(prod.IdProducto, prod.NombreProducto, prod.Precio, prod.FotoProducto);
 
-                // FORZAR TAMAÑO Y COLOR (Para que no sea invisible)
-                tarjeta.Size = new Size(150, 180);
-                tarjeta.BackColor = Color.White;
+                tarjeta.Size = new Size(160, 200);
                 tarjeta.Visible = true;
+                tarjeta.Margin = new Padding(10); // Espacio entre tarjetas
 
-                if (flpCuadricula != null)
+                tarjeta.Click += AgregarAlCarrito_Click;
+
+                if (flpGridProductos != null)
                 {
-                    flpCuadricula.Controls.Add(tarjeta);
-                    contadorVisual++;
+                    flpGridProductos.Controls.Add(tarjeta);
                 }
             }
-
-            // MENSAJE FINAL (Para confirmar que el código sí pasó por aquí)
-            MessageBox.Show("Se intentaron dibujar " + contadorVisual + " tarjetas.");
         }
 
         private void AgregarAlCarrito_Click(object sender, EventArgs e)
         {
-            ControlProducto tarjeta = (ControlProducto)sender;
-            int id = tarjeta.IdProducto;
-            string nombre = tarjeta.Nombre;
-            decimal precio = tarjeta.Precio;
+            ControlProducto tarjeta = sender as ControlProducto;
 
-            bool existe = false;
-
-            foreach (DataGridViewRow fila in dataGridView1.Rows)
+            if (tarjeta != null)
             {
-                if (fila.Cells["Id"].Value != null && Convert.ToInt32(fila.Cells["Id"].Value) == id)
+                int id = tarjeta.IdProducto;
+                string nombre = tarjeta.Nombre;
+                decimal precio = tarjeta.Precio;
+                bool existe = false;
+
+                // Buscamos si ya existe en el Grid para sumar cantidad
+                foreach (DataGridViewRow fila in dataGridView1.Rows)
                 {
-                    int cantidadActual = Convert.ToInt32(fila.Cells["Cantidad"].Value);
-                    cantidadActual++; 
-
-                    fila.Cells["Cantidad"].Value = cantidadActual;
-
-                    fila.Cells["Importe"].Value = (cantidadActual * precio); 
-
-                    existe = true;
-                    break; 
+                    if (fila.Cells["Id"].Value != null && Convert.ToInt32(fila.Cells["Id"].Value) == id)
+                    {
+                        int cantidad = Convert.ToInt32(fila.Cells["Cantidad"].Value) + 1;
+                        fila.Cells["Cantidad"].Value = cantidad;
+                        fila.Cells["Importe"].Value = (cantidad * precio);
+                        existe = true;
+                        break;
+                    }
                 }
-            }
 
-            if (!existe)
-            {
-                dataGridView1.Rows.Add(id, nombre, precio, 1, precio);
+                // Si no existe, lo agregamos nuevo
+                if (!existe)
+                {
+                    dataGridView1.Rows.Add(id, nombre, precio, 1, precio);
+                }
+
+                CalcularTotalGeneral();
             }
-            CalcularTotalGeneral();
         }
 
         private void CalcularTotalGeneral()
@@ -235,12 +238,8 @@ namespace ProyectoFinalGerman
             foreach (DataGridViewRow fila in dataGridView1.Rows)
             {
                 if (fila.Cells["Importe"].Value != null)
-                {
                     total += Convert.ToDecimal(fila.Cells["Importe"].Value);
-                }
             }
-            // Si tienes un label llamado lblTotal:
-            // lblTotal.Text = total.ToString("C2");
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -273,6 +272,6 @@ namespace ProyectoFinalGerman
             CalcularTotalGeneral(); 
 
         }
-        
+
     }
 }

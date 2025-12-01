@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.flpMenuPrincipal = new System.Windows.Forms.FlowLayoutPanel();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
+            this.flpMenuPrincipal = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -50,9 +50,21 @@
             this.groupBox1.Controls.Add(this.btnMenu);
             this.groupBox1.Location = new System.Drawing.Point(0, -11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1270, 77);
+            this.groupBox1.Size = new System.Drawing.Size(1270, 64);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.AutoSize = true;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Image = global::ProyectoFinalGerman.Properties.Resources.atras;
+            this.btnMenu.Location = new System.Drawing.Point(6, 12);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(44, 45);
+            this.btnMenu.TabIndex = 0;
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // groupBox2
             // 
@@ -61,14 +73,26 @@
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1271, 67);
+            this.groupBox2.Size = new System.Drawing.Size(1271, 56);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Image = global::ProyectoFinalGerman.Properties.Resources._shopping_cart_90604;
+            this.label15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label15.Location = new System.Drawing.Point(557, 15);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(193, 29);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "      Cuenta";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 86);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 86);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -83,24 +107,11 @@
             this.groupBox3.Controls.Add(this.btnEliminar);
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox3.Location = new System.Drawing.Point(0, 606);
+            this.groupBox3.Location = new System.Drawing.Point(0, 591);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1271, 338);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
-            // 
-            // flpMenuPrincipal
-            // 
-            this.flpMenuPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flpMenuPrincipal.AutoScroll = true;
-            this.flpMenuPrincipal.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.flpMenuPrincipal.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpMenuPrincipal.Location = new System.Drawing.Point(7, 69);
-            this.flpMenuPrincipal.Name = "flpMenuPrincipal";
-            this.flpMenuPrincipal.Size = new System.Drawing.Size(1250, 543);
-            this.flpMenuPrincipal.TabIndex = 24;
-            this.flpMenuPrincipal.WrapContents = false;
             // 
             // btnGuardar
             // 
@@ -113,18 +124,6 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Image = global::ProyectoFinalGerman.Properties.Resources._shopping_cart_90604;
-            this.label15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label15.Location = new System.Drawing.Point(557, 18);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(193, 29);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "      Cuenta";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -136,17 +135,18 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnMenu
+            // flpMenuPrincipal
             // 
-            this.btnMenu.AutoSize = true;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Image = global::ProyectoFinalGerman.Properties.Resources.atras;
-            this.btnMenu.Location = new System.Drawing.Point(6, 12);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(44, 45);
-            this.btnMenu.TabIndex = 0;
-            this.btnMenu.UseVisualStyleBackColor = true;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            this.flpMenuPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpMenuPrincipal.AutoScroll = true;
+            this.flpMenuPrincipal.BackColor = System.Drawing.SystemColors.Control;
+            this.flpMenuPrincipal.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpMenuPrincipal.Location = new System.Drawing.Point(7, 52);
+            this.flpMenuPrincipal.Name = "flpMenuPrincipal";
+            this.flpMenuPrincipal.Size = new System.Drawing.Size(1250, 546);
+            this.flpMenuPrincipal.TabIndex = 24;
+            this.flpMenuPrincipal.WrapContents = false;
             // 
             // MenuPan
             // 
@@ -154,7 +154,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1269, 914);
+            this.ClientSize = new System.Drawing.Size(1269, 885);
             this.Controls.Add(this.flpMenuPrincipal);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);

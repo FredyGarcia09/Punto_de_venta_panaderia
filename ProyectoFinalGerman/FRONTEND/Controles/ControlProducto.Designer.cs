@@ -38,7 +38,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(14, 105);
+            this.lblNombre.Location = new System.Drawing.Point(14, 161);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(52, 18);
             this.lblNombre.TabIndex = 1;
@@ -48,7 +48,7 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(14, 123);
+            this.lblPrecio.Location = new System.Drawing.Point(14, 189);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(52, 18);
             this.lblPrecio.TabIndex = 2;
@@ -58,7 +58,7 @@
             // 
             this.pbFoto.Location = new System.Drawing.Point(17, 18);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(178, 84);
+            this.pbFoto.Size = new System.Drawing.Size(176, 131);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbFoto.TabIndex = 0;
             this.pbFoto.TabStop = false;
@@ -71,7 +71,9 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pbFoto);
             this.Name = "ControlProducto";
-            this.Size = new System.Drawing.Size(893, 485);
+            this.Size = new System.Drawing.Size(216, 224);
+            this.MouseEnter += new System.EventHandler(this.ControlProducto_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.ControlProducto_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

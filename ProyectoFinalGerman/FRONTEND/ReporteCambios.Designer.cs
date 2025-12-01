@@ -36,16 +36,16 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.clbProductos = new System.Windows.Forms.CheckedListBox();
-            this.dtpFecha1 = new System.Windows.Forms.DateTimePicker();
-            this.dtpFecha2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpMes1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpMes2 = new System.Windows.Forms.DateTimePicker();
             this.btnComparar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.chartVentas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -97,19 +97,19 @@
             this.clbProductos.Size = new System.Drawing.Size(184, 514);
             this.clbProductos.TabIndex = 4;
             // 
-            // dtpFecha1
+            // dtpMes1
             // 
-            this.dtpFecha1.Location = new System.Drawing.Point(514, 113);
-            this.dtpFecha1.Name = "dtpFecha1";
-            this.dtpFecha1.Size = new System.Drawing.Size(200, 22);
-            this.dtpFecha1.TabIndex = 5;
+            this.dtpMes1.Location = new System.Drawing.Point(514, 113);
+            this.dtpMes1.Name = "dtpMes1";
+            this.dtpMes1.Size = new System.Drawing.Size(200, 22);
+            this.dtpMes1.TabIndex = 5;
             // 
-            // dtpFecha2
+            // dtpMes2
             // 
-            this.dtpFecha2.Location = new System.Drawing.Point(956, 117);
-            this.dtpFecha2.Name = "dtpFecha2";
-            this.dtpFecha2.Size = new System.Drawing.Size(200, 22);
-            this.dtpFecha2.TabIndex = 6;
+            this.dtpMes2.Location = new System.Drawing.Point(956, 117);
+            this.dtpMes2.Name = "dtpMes2";
+            this.dtpMes2.Size = new System.Drawing.Size(200, 22);
+            this.dtpMes2.TabIndex = 6;
             // 
             // btnComparar
             // 
@@ -121,31 +121,31 @@
             this.btnComparar.UseVisualStyleBackColor = true;
             this.btnComparar.Click += new System.EventHandler(this.btnComparar_Click);
             // 
-            // dataGridView1
+            // dgvDatos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(222, 158);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(809, 469);
-            this.dataGridView1.TabIndex = 8;
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Location = new System.Drawing.Point(222, 158);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.RowHeadersWidth = 51;
+            this.dgvDatos.RowTemplate.Height = 24;
+            this.dgvDatos.Size = new System.Drawing.Size(809, 469);
+            this.dgvDatos.TabIndex = 8;
             // 
-            // chart1
+            // chartVentas
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chartVentas.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(1062, 158);
-            this.chart1.Name = "chart1";
+            this.chartVentas.Legends.Add(legend1);
+            this.chartVentas.Location = new System.Drawing.Point(1062, 158);
+            this.chartVentas.Name = "chartVentas";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(801, 469);
-            this.chart1.TabIndex = 9;
-            this.chart1.Text = "chart1";
+            this.chartVentas.Series.Add(series1);
+            this.chartVentas.Size = new System.Drawing.Size(801, 469);
+            this.chartVentas.TabIndex = 9;
+            this.chartVentas.Text = "chart1";
             // 
             // ReporteCambios
             // 
@@ -153,21 +153,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1884, 718);
-            this.Controls.Add(this.chart1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.chartVentas);
+            this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.btnComparar);
-            this.Controls.Add(this.dtpFecha2);
-            this.Controls.Add(this.dtpFecha1);
+            this.Controls.Add(this.dtpMes2);
+            this.Controls.Add(this.dtpMes1);
             this.Controls.Add(this.clbProductos);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "ReporteCambios";
             this.Text = "ReporteCambios";
+            this.Load += new System.EventHandler(this.ReporteCambios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartVentas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -179,10 +180,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckedListBox clbProductos;
-        private System.Windows.Forms.DateTimePicker dtpFecha1;
-        private System.Windows.Forms.DateTimePicker dtpFecha2;
+        private System.Windows.Forms.DateTimePicker dtpMes1;
+        private System.Windows.Forms.DateTimePicker dtpMes2;
         private System.Windows.Forms.Button btnComparar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartVentas;
     }
 }

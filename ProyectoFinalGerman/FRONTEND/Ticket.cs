@@ -15,21 +15,23 @@ namespace ProyectoFinalGerman
 {
     public partial class Ticket : Form
     {
-        private List<ItemCarrito> listaProductos;
-        private int idUsuarioCajero;
+        private List<ItemCarrito> _listaProductos;
+        private int _idUsuarioCajero;
         private VentaDAO ventaDAO = new VentaDAO();
-        private decimal totalVenta = 0;
+        private decimal _totalVenta = 0;
+
         public Ticket(List<ItemCarrito> listaRecibida, int idUsuario)
         {
             InitializeComponent();
-            this.listaProductos = listaRecibida;
-            this.idUsuarioCajero = idUsuario;
+            this._listaProductos = listaRecibida;
+            this._idUsuarioCajero = idUsuario;
+
         }
 
         private void Ticket_Load(object sender, EventArgs e)
         {
             lblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-            lblIdEmpleado.Text = idUsuarioCajero.ToString();
+            lblIdEmpleado.Text = _idUsuarioCajero.ToString();
             LlenarTablaYCalcularTotal();
             //ProcesarVentaEnBD();
             txtEfectivo.Select();
@@ -46,16 +48,16 @@ namespace ProyectoFinalGerman
             }
 
             dgvTicket.Rows.Clear();
-            totalVenta = 0;
+            _totalVenta = 0;
 
-            foreach (var item in listaProductos)
+            foreach (var item in _listaProductos)
             {
                 dgvTicket.Rows.Add(item.Cantidad, item.Nombre, item.Importe.ToString("C2"));
-                totalVenta += item.Importe;
+                _totalVenta += item.Importe;
             }
 
-            lblTotal.Text = totalVenta.ToString("C2");    
-            lblGranTotal.Text = totalVenta.ToString("C2"); 
+            lblTotal.Text = _totalVenta.ToString("C2");    
+            lblGranTotal.Text = _totalVenta.ToString("C2"); 
         }
 
         // EVENTO PARA CALCULAR CAMBIO 
@@ -70,7 +72,7 @@ namespace ProyectoFinalGerman
                 }
 
                 decimal efectivoEntregado = Convert.ToDecimal(txtEfectivo.Text);
-                decimal cambio = efectivoEntregado - totalVenta;
+                decimal cambio = efectivoEntregado - _totalVenta;
                 lblCambio.Text = cambio.ToString("C2");
 
                 if (cambio < 0)
@@ -87,7 +89,7 @@ namespace ProyectoFinalGerman
         private void CalcularTotales()
         {
             decimal subtotal = 0;
-            foreach (var item in this.listaProductos)
+            foreach (var item in this._listaProductos)
             {
                 subtotal += item.Importe;
             }
@@ -122,7 +124,7 @@ namespace ProyectoFinalGerman
 
             if (decimal.TryParse(txtEfectivo.Text, out efectivo))
             {
-                decimal cambio = efectivo - totalVenta;
+                decimal cambio = efectivo - _totalVenta;
                 lblCambio.Text = cambio.ToString("C2");
                 if (cambio < 0)
                 {
@@ -146,19 +148,36 @@ namespace ProyectoFinalGerman
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            string mensajeResultado = "";
+            // 1. Validar pago
+            decimal efectivo = 0;
+            decimal.TryParse(txtEfectivo.Text, out efectivo);
 
-            bool ventaExitosa = ventaDAO.GuardarVentaCompleta(idUsuarioCajero, listaProductos, out mensajeResultado);
-
-            if (ventaExitosa)
+            if (efectivo < _totalVenta)
             {
-                MessageBox.Show(mensajeResultado, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El efectivo es insuficiente para cubrir el total.", "Pago Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEfectivo.Focus();
+                return;
+            }
 
-                this.Close();
+            // 2. Preguntar confirmación (Opcional, para evitar clics dobles)
+            if (MessageBox.Show("¿Confirmar venta?", "Procesar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                return;
+
+            // 3. LLAMAR AL DAO PARA GUARDAR EN BD
+            VentaDAO dao = new VentaDAO();
+            int idOrdenGenerada;
+            string mensaje;
+
+            bool exito = dao.RealizarVenta(_idUsuarioCajero, _listaProductos, out idOrdenGenerada, out mensaje);
+
+            if (exito)
+            {
+                MessageBox.Show($"¡Venta registrada con éxito!\nTicket #{idOrdenGenerada}", "Venta Finalizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close(); // Cierra el ticket y vuelve al menú para la siguiente venta
             }
             else
             {
-                MessageBox.Show(mensajeResultado, "Error en la venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error crítico al guardar la venta:\n" + mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

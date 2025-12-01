@@ -18,34 +18,48 @@ namespace ProyectoFinalGerman // Asegúrate que este namespace coincida con el d
         public ControlProducto()
         {
             InitializeComponent();
-            // Hacer que todo el control sea clicable
-            this.Click += (s, e) => AlHacerClick?.Invoke(this, EventArgs.Empty);
-            pbFoto.Click += (s, e) => AlHacerClick?.Invoke(this, EventArgs.Empty);
-            lblNombre.Click += (s, e) => AlHacerClick?.Invoke(this, EventArgs.Empty);
-            lblPrecio.Click += (s, e) => AlHacerClick?.Invoke(this, EventArgs.Empty);
+            // Forzar estilos al iniciar
+            this.DoubleBuffered = true;
+            this.BorderStyle = BorderStyle.FixedSingle;
         }
 
-        public void CargarDatos(int id, string nombre, decimal precio, byte[] fotoBytes)
+        public void CargarDatos(int id, string nombre, decimal precio, byte[] foto)
         {
-            IdProducto = id;
-            Nombre = nombre;
-            Precio = precio;
+            this.IdProducto = id;
+            this.Nombre = nombre;
+            this.Precio = precio;
 
             lblNombre.Text = nombre;
-            lblPrecio.Text = precio.ToString("C2"); // Formato moneda
+            lblPrecio.Text = precio.ToString("C2");
 
-            if (fotoBytes != null && fotoBytes.Length > 0)
+            if (foto != null && foto.Length > 0)
             {
-                using (MemoryStream ms = new MemoryStream(fotoBytes))
+                using (MemoryStream ms = new MemoryStream(foto))
                 {
                     pbFoto.Image = Image.FromStream(ms);
+                    pbFoto.SizeMode = PictureBoxSizeMode.Zoom;
                 }
             }
             else
             {
-                pbFoto.Image = null;
-                pbFoto.BackColor = Color.LightGray;
+                pbFoto.Image = null; // Imagen por defecto si quieres
             }
+
+            this.pbFoto.Click += (s, e) => this.OnClick(e);
+            this.lblNombre.Click += (s, e) => this.OnClick(e);
+            this.lblPrecio.Click += (s, e) => this.OnClick(e);
+        }
+
+        private void ControlProducto_MouseEnter(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Bisque;
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void ControlProducto_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = Color.White;
+            this.Cursor = Cursors.Default;
         }
     }
 }

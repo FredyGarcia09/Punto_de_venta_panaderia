@@ -75,7 +75,7 @@ namespace ProyectoFinalGerman
 
             try
             {
-                ReporteVentasPorProductoDAO dao = new ReporteVentasPorProductoDAO();
+                ReporteDAO dao = new ReporteDAO();
                 DataTable dt = dao.ObtenerVentasPorProducto(dtpInicio.Value, dtpFin.Value);
 
                 dgvVentas.DataSource = dt;
