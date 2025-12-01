@@ -37,21 +37,20 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.flpMenuPrincipal = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.flpProductosCategoria = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.flpMenuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.btnMenu);
             this.groupBox1.Location = new System.Drawing.Point(0, -11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1270, 67);
+            this.groupBox1.Size = new System.Drawing.Size(1270, 77);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -69,24 +68,25 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1271, 80);
+            this.groupBox2.Size = new System.Drawing.Size(1271, 67);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Image = global::ProyectoFinalGerman.Properties.Resources._shopping_cart_90604;
             this.label15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label15.Location = new System.Drawing.Point(515, 24);
+            this.label15.Location = new System.Drawing.Point(557, 18);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(193, 29);
             this.label15.TabIndex = 0;
-            this.label15.Text = "              Cuenta";
+            this.label15.Text = "      Cuenta";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridView1
@@ -101,6 +101,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.btnGuardar);
             this.groupBox3.Controls.Add(this.groupBox2);
             this.groupBox3.Controls.Add(this.btnEliminar);
@@ -108,7 +109,7 @@
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Location = new System.Drawing.Point(0, 606);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1271, 328);
+            this.groupBox3.Size = new System.Drawing.Size(1271, 338);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             // 
@@ -116,7 +117,7 @@
             // 
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Image = global::ProyectoFinalGerman.Properties.Resources.guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(1148, 174);
+            this.btnGuardar.Location = new System.Drawing.Point(1148, 217);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(97, 62);
             this.btnGuardar.TabIndex = 22;
@@ -126,7 +127,7 @@
             // 
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = global::ProyectoFinalGerman.Properties.Resources.BorrarProducto;
-            this.btnEliminar.Location = new System.Drawing.Point(1148, 86);
+            this.btnEliminar.Location = new System.Drawing.Point(1148, 111);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(97, 55);
             this.btnEliminar.TabIndex = 21;
@@ -135,28 +136,15 @@
             // 
             // flpMenuPrincipal
             // 
-            this.flpMenuPrincipal.Controls.Add(this.panel1);
-            this.flpMenuPrincipal.Controls.Add(this.flpProductosCategoria);
+            this.flpMenuPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpMenuPrincipal.AutoScroll = true;
             this.flpMenuPrincipal.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpMenuPrincipal.Location = new System.Drawing.Point(17, 65);
+            this.flpMenuPrincipal.Location = new System.Drawing.Point(6, 62);
             this.flpMenuPrincipal.Name = "flpMenuPrincipal";
-            this.flpMenuPrincipal.Size = new System.Drawing.Size(1240, 535);
-            this.flpMenuPrincipal.TabIndex = 24;
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(0, 0);
-            this.panel1.TabIndex = 0;
-            // 
-            // flpProductosCategoria
-            // 
-            this.flpProductosCategoria.Location = new System.Drawing.Point(3, 9);
-            this.flpProductosCategoria.Name = "flpProductosCategoria";
-            this.flpProductosCategoria.Size = new System.Drawing.Size(200, 100);
-            this.flpProductosCategoria.TabIndex = 1;
+            this.flpMenuPrincipal.Size = new System.Drawing.Size(1251, 548);
+            this.flpMenuPrincipal.TabIndex = 27;
+            this.flpMenuPrincipal.WrapContents = false;
             // 
             // MenuPan
             // 
@@ -164,20 +152,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1269, 904);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(1269, 914);
             this.Controls.Add(this.flpMenuPrincipal);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Name = "MenuPan";
             this.Text = "MenuPan";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            this.flpMenuPrincipal.ResumeLayout(false);
-            this.flpMenuPrincipal.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -193,7 +178,5 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.FlowLayoutPanel flpMenuPrincipal;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flpProductosCategoria;
     }
 }
