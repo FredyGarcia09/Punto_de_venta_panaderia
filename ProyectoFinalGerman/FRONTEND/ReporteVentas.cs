@@ -44,7 +44,7 @@ namespace ProyectoFinalGerman
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
-
+            CargarReporte();
         }
 
         private void ReporteVentas_Load(object sender, EventArgs e)
@@ -102,6 +102,11 @@ namespace ProyectoFinalGerman
             {
                 MessageBox.Show("Error al generar reporte: " + ex.Message);
             }
+        }
+
+        private void dtpInicio_ValueChanged(object sender, EventArgs e)
+        {
+            CargarReporte();
         }
     }
 }

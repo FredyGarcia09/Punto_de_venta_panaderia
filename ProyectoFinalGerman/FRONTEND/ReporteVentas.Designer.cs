@@ -119,6 +119,7 @@
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(310, 24);
             this.dtpInicio.TabIndex = 7;
+            this.dtpInicio.ValueChanged += new System.EventHandler(this.dtpInicio_ValueChanged);
             // 
             // dtpFin
             // 
