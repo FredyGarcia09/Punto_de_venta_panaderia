@@ -96,6 +96,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BACKEND\DAOs\VentaDAO.cs" />
     <Compile Include="FRONTEND\Agregarcategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +112,12 @@
     <Compile Include="BACKEND\DAOs\CategoriaDAO.cs" />
     <Compile Include="BACKEND\DAOs\ProductoDAO.cs" />
     <Compile Include="BACKEND\DAOs\UsuarioDAO.cs" />
+    <Compile Include="FRONTEND\Controles\ControlProducto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FRONTEND\Controles\ControlProducto.Designer.cs">
+      <DependentUpon>ControlProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRONTEND\EditarDatosEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +157,7 @@
     </Compile>
     <Compile Include="MODELOS\Categoria.cs" />
     <Compile Include="MODELOS\DetalleOrden.cs" />
+    <Compile Include="MODELOS\ITEMS\ItemCarrito.cs" />
     <Compile Include="MODELOS\ITEMS\ReporteCorporativoItem.cs" />
     <Compile Include="MODELOS\ITEMS\ReporteVentaItem.cs" />
     <Compile Include="MODELOS\Orden.cs" />
@@ -186,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRONTEND\AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRONTEND\Controles\ControlProducto.resx">
+      <DependentUpon>ControlProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRONTEND\EditarDatosEmpleado.resx">
       <DependentUpon>EditarDatosEmpleado.cs</DependentUpon>
@@ -312,6 +323,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imprimir.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

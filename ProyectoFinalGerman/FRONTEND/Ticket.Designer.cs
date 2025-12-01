@@ -32,16 +32,12 @@ namespace ProyectoFinalGerman
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dgvTicket = new System.Windows.Forms.DataGridView();
+            this.lbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblIdEmpleado = new System.Windows.Forms.Label();
+            this.lblCambio = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -50,108 +46,90 @@ namespace ProyectoFinalGerman
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblGranTotal = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtEfectivo = new System.Windows.Forms.TextBox();
+            this.btnRegresa = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTicket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // dgvTicket
             // 
-            this.pictureBox1.Image = global::ProyectoFinalGerman.Properties.Resources.Logotipo_panadería_artesanal_vintage_amarillo;
-            this.pictureBox1.Location = new System.Drawing.Point(238, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.dgvTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTicket.Location = new System.Drawing.Point(111, 336);
+            this.dgvTicket.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvTicket.Name = "dgvTicket";
+            this.dgvTicket.RowHeadersWidth = 51;
+            this.dgvTicket.Size = new System.Drawing.Size(596, 293);
+            this.dgvTicket.TabIndex = 1;
             // 
-            // dataGridView1
+            // lbl
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(83, 273);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(447, 238);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 210);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "N. de orden:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(352, 210);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "ID del empleado:";
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.Location = new System.Drawing.Point(69, 258);
+            this.lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(79, 20);
+            this.lbl.TabIndex = 3;
+            this.lbl.Text = "Terminal:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(352, 232);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(69, 286);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.Size = new System.Drawing.Size(144, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Fecha de compra:";
             // 
-            // label4
+            // lblIdEmpleado
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(80, 232);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Estado de orden:";
+            this.lblIdEmpleado.AutoSize = true;
+            this.lblIdEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdEmpleado.Location = new System.Drawing.Point(221, 258);
+            this.lblIdEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdEmpleado.Name = "lblIdEmpleado";
+            this.lblIdEmpleado.Size = new System.Drawing.Size(45, 20);
+            this.lblIdEmpleado.TabIndex = 7;
+            this.lblIdEmpleado.Text = "texto";
             // 
-            // label5
+            // lblCambio
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(152, 210);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "texto";
+            this.lblCambio.AutoSize = true;
+            this.lblCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCambio.Location = new System.Drawing.Point(151, 738);
+            this.lblCambio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCambio.Name = "lblCambio";
+            this.lblCambio.Size = new System.Drawing.Size(45, 20);
+            this.lblCambio.TabIndex = 8;
+            this.lblCambio.Text = "texto";
             // 
-            // label6
+            // lblTotal
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(445, 210);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "texto";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(174, 232);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "texto";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(451, 528);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(30, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "texto";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(151, 669);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(45, 20);
+            this.lblTotal.TabIndex = 9;
+            this.lblTotal.Text = "texto";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(52, 257);
+            this.label9.Location = new System.Drawing.Point(69, 316);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(508, 13);
+            this.label9.Size = new System.Drawing.Size(675, 16);
             this.label9.TabIndex = 10;
             this.label9.Text = "---------------------------------------------------------------------------------" +
     "--------------------------------------------------------------------------------" +
@@ -160,18 +138,21 @@ namespace ProyectoFinalGerman
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(392, 528);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(68, 704);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 13);
+            this.label10.Size = new System.Drawing.Size(74, 20);
             this.label10.TabIndex = 11;
-            this.label10.Text = "SubTotal:";
+            this.label10.Text = "Efectivo:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(52, 186);
+            this.label11.Location = new System.Drawing.Point(69, 229);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(508, 13);
+            this.label11.Size = new System.Drawing.Size(675, 16);
             this.label11.TabIndex = 12;
             this.label11.Text = "---------------------------------------------------------------------------------" +
     "--------------------------------------------------------------------------------" +
@@ -181,36 +162,41 @@ namespace ProyectoFinalGerman
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(235, 126);
+            this.label12.Location = new System.Drawing.Point(313, 155);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(130, 16);
+            this.label12.Size = new System.Drawing.Size(160, 20);
             this.label12.TabIndex = 13;
             this.label12.Text = "Panaderia Artesanal";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(174, 152);
+            this.label13.Location = new System.Drawing.Point(232, 187);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(249, 13);
+            this.label13.Size = new System.Drawing.Size(300, 16);
             this.label13.TabIndex = 14;
             this.label13.Text = "Av. América 4, Zona centro, 38800, Moroleon, Gto.";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(392, 551);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(68, 738);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 13);
+            this.label14.Size = new System.Drawing.Size(71, 20);
             this.label14.TabIndex = 15;
-            this.label14.Text = "IVA 20%";
+            this.label14.Text = "Cambio:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(52, 564);
+            this.label15.Location = new System.Drawing.Point(69, 653);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(508, 13);
+            this.label15.Size = new System.Drawing.Size(675, 16);
             this.label15.TabIndex = 16;
             this.label15.Text = "---------------------------------------------------------------------------------" +
     "--------------------------------------------------------------------------------" +
@@ -219,37 +205,112 @@ namespace ProyectoFinalGerman
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(392, 577);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(68, 669);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(34, 13);
+            this.label16.Size = new System.Drawing.Size(56, 20);
             this.label16.TabIndex = 17;
-            this.label16.Text = "Total ";
+            this.label16.Text = "Total :";
             // 
-            // label17
+            // lblFecha
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(451, 577);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(30, 13);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "texto";
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(221, 286);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(45, 20);
+            this.lblFecha.TabIndex = 19;
+            this.lblFecha.Text = "texto";
             // 
-            // label18
+            // label1
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(451, 232);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(30, 13);
-            this.label18.TabIndex = 19;
-            this.label18.Text = "texto";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(69, 758);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(675, 16);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "---------------------------------------------------------------------------------" +
+    "--------------------------------------------------------------------------------" +
+    "------";
+            // 
+            // lblGranTotal
+            // 
+            this.lblGranTotal.AutoSize = true;
+            this.lblGranTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGranTotal.Location = new System.Drawing.Point(390, 789);
+            this.lblGranTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGranTotal.Name = "lblGranTotal";
+            this.lblGranTotal.Size = new System.Drawing.Size(76, 32);
+            this.lblGranTotal.TabIndex = 21;
+            this.lblGranTotal.Text = "texto";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(292, 828);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(286, 32);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Gracias por su visita!.";
+            // 
+            // txtEfectivo
+            // 
+            this.txtEfectivo.Location = new System.Drawing.Point(155, 702);
+            this.txtEfectivo.Name = "txtEfectivo";
+            this.txtEfectivo.Size = new System.Drawing.Size(100, 22);
+            this.txtEfectivo.TabIndex = 23;
+            this.txtEfectivo.TextChanged += new System.EventHandler(this.txtEfectivo_TextChanged_1);
+            this.txtEfectivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEfectivo_KeyPress);
+            // 
+            // btnRegresa
+            // 
+            this.btnRegresa.Image = global::ProyectoFinalGerman.Properties.Resources.atras;
+            this.btnRegresa.Location = new System.Drawing.Point(12, 891);
+            this.btnRegresa.Name = "btnRegresa";
+            this.btnRegresa.Size = new System.Drawing.Size(57, 44);
+            this.btnRegresa.TabIndex = 25;
+            this.btnRegresa.UseVisualStyleBackColor = true;
+            this.btnRegresa.Click += new System.EventHandler(this.btnRegresa_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Image = global::ProyectoFinalGerman.Properties.Resources.Imprimir;
+            this.btnImprimir.Location = new System.Drawing.Point(752, 881);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(64, 44);
+            this.btnImprimir.TabIndex = 24;
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoFinalGerman.Properties.Resources.Logotipo_panadería_artesanal_vintage_amarillo;
+            this.pictureBox1.Location = new System.Drawing.Point(317, 30);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 105);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Ticket
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 749);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(839, 947);
+            this.Controls.Add(this.btnRegresa);
+            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.txtEfectivo);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblGranTotal);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -258,20 +319,19 @@ namespace ProyectoFinalGerman
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.lblCambio);
+            this.Controls.Add(this.lblIdEmpleado);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lbl);
+            this.Controls.Add(this.dgvTicket);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Ticket";
             this.Text = "Ticket";
+            this.Load += new System.EventHandler(this.Ticket_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTicket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,15 +340,12 @@ namespace ProyectoFinalGerman
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dgvTicket;
+        private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblIdEmpleado;
+        private System.Windows.Forms.Label lblCambio;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -297,7 +354,12 @@ namespace ProyectoFinalGerman
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblGranTotal;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtEfectivo;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnRegresa;
     }
 }

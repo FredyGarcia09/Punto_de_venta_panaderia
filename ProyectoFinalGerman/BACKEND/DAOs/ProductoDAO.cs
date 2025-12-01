@@ -219,5 +219,70 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
                 }
             }
         }
+
+        // ... (Tus otros métodos arriba) ...
+
+        // =============================================================
+        // AGREGAR ESTE MÉTODO PARA EL MENÚ VISUAL
+        // =============================================================
+        public List<Producto> ObtenerProductosParaMenu()
+        {
+            List<Producto> lista = new List<Producto>();
+
+            using (MySqlConnection conn = conexion.ObtenerConexion())
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"
+                        SELECT 
+                            c.nombreCategoria, 
+                            p.IdProducto, 
+                            p.nombreProducto, 
+                            p.precio, 
+                            p.fotoProducto 
+                        FROM productos p
+                        INNER JOIN categorias c ON p.IdCategoria = c.IdCategoria
+                        WHERE p.descontinuado = 0 
+                        ORDER BY c.nombreCategoria, p.nombreProducto";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Producto prod = new Producto();
+
+                            // Mapeamos los datos de la BD al Modelo
+                            prod.IdProducto = Convert.ToInt32(reader["IdProducto"]);
+                            prod.NombreProducto = reader["nombreProducto"].ToString();
+                            prod.Precio = Convert.ToDecimal(reader["precio"]);
+
+                            // Esta propiedad 'NombreCategoria' la agregamos al Modelo como auxiliar
+                            prod.NombreCategoria = reader["nombreCategoria"].ToString();
+
+                            // Manejo seguro de la imagen (BLOB)
+                            if (reader["fotoProducto"] != DBNull.Value)
+                            {
+                                prod.FotoProducto = (byte[])reader["fotoProducto"];
+                            }
+                            else
+                            {
+                                prod.FotoProducto = null;
+                            }
+
+                            lista.Add(prod);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Maneja el error como prefieras (log, throw, etc.)
+                    throw new Exception("Error al cargar menú: " + ex.Message);
+                }
+            }
+            return lista;
+        }
+
     }
 }
