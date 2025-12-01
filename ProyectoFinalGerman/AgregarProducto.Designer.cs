@@ -32,24 +32,26 @@
             this.btnRegresar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnCategoria = new System.Windows.Forms.Button();
+            this.btnAgregarCategoria = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAgregarFoto = new System.Windows.Forms.Button();
             this.txtPrecioProducto = new System.Windows.Forms.TextBox();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnRestar = new System.Windows.Forms.Button();
             this.btnSumar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.rtbDescripcionProducto = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -74,7 +76,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(-2, 491);
+            this.groupBox2.Location = new System.Drawing.Point(-2, 591);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1086, 73);
             this.groupBox2.TabIndex = 1;
@@ -82,15 +84,17 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnCategoria);
+            this.groupBox3.Controls.Add(this.rtbDescripcionProducto);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.btnAgregarCategoria);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.cboCategoria);
             this.groupBox3.Controls.Add(this.txtCantidad);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.btnAgregarFoto);
             this.groupBox3.Controls.Add(this.txtPrecioProducto);
             this.groupBox3.Controls.Add(this.txtNombreProducto);
-            this.groupBox3.Controls.Add(this.pictureBox1);
+            this.groupBox3.Controls.Add(this.pbFoto);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.btnRestar);
             this.groupBox3.Controls.Add(this.btnSumar);
@@ -98,39 +102,39 @@
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Location = new System.Drawing.Point(33, 144);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(938, 292);
+            this.groupBox3.Size = new System.Drawing.Size(938, 375);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
-            // btnCategoria
+            // btnAgregarCategoria
             // 
-            this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategoria.Location = new System.Drawing.Point(646, 181);
-            this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(206, 37);
-            this.btnCategoria.TabIndex = 13;
-            this.btnCategoria.Text = "Agregar Categoria.";
-            this.btnCategoria.UseVisualStyleBackColor = true;
-            this.btnCategoria.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnAgregarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(641, 177);
+            this.btnAgregarCategoria.Name = "btnAgregarCategoria";
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(206, 37);
+            this.btnAgregarCategoria.TabIndex = 13;
+            this.btnAgregarCategoria.Text = "Agregar Categoria.";
+            this.btnAgregarCategoria.UseVisualStyleBackColor = true;
+            this.btnAgregarCategoria.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(234, 149);
+            this.label3.Location = new System.Drawing.Point(234, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(200, 22);
             this.label3.TabIndex = 12;
             this.label3.Text = "Selecciona la Categoria";
             // 
-            // comboBox1
+            // cboCategoria
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(238, 187);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(313, 30);
-            this.comboBox1.TabIndex = 11;
+            this.cboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Location = new System.Drawing.Point(238, 183);
+            this.cboCategoria.Name = "cboCategoria";
+            this.cboCategoria.Size = new System.Drawing.Size(313, 30);
+            this.cboCategoria.TabIndex = 11;
             // 
             // txtCantidad
             // 
@@ -157,7 +161,7 @@
             this.btnAgregarFoto.BackColor = System.Drawing.Color.Transparent;
             this.btnAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarFoto.Image = global::ProyectoFinalGerman.Properties.Resources.subirFoto;
-            this.btnAgregarFoto.Location = new System.Drawing.Point(75, 236);
+            this.btnAgregarFoto.Location = new System.Drawing.Point(73, 281);
             this.btnAgregarFoto.Name = "btnAgregarFoto";
             this.btnAgregarFoto.Size = new System.Drawing.Size(74, 50);
             this.btnAgregarFoto.TabIndex = 4;
@@ -182,14 +186,14 @@
             this.txtNombreProducto.TabIndex = 7;
             this.txtNombreProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // pictureBox1
+            // pbFoto
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(19, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 209);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.pbFoto.Location = new System.Drawing.Point(17, 43);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(200, 227);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFoto.TabIndex = 6;
+            this.pbFoto.TabStop = false;
             // 
             // label5
             // 
@@ -251,18 +255,36 @@
             // 
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Image = global::ProyectoFinalGerman.Properties.Resources.guardar1;
-            this.btnGuardar.Location = new System.Drawing.Point(466, 442);
+            this.btnGuardar.Location = new System.Drawing.Point(466, 537);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 43);
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(234, 229);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(208, 22);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Descripción del producto";
+            // 
+            // rtbDescripcionProducto
+            // 
+            this.rtbDescripcionProducto.Location = new System.Drawing.Point(236, 257);
+            this.rtbDescripcionProducto.Name = "rtbDescripcionProducto";
+            this.rtbDescripcionProducto.Size = new System.Drawing.Size(642, 92);
+            this.rtbDescripcionProducto.TabIndex = 15;
+            this.rtbDescripcionProducto.Text = "";
+            // 
             // AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 551);
+            this.ClientSize = new System.Drawing.Size(999, 664);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);
@@ -270,10 +292,11 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "AgregarProducto";
             this.Text = "AgregarProducto";
+            this.Load += new System.EventHandler(this.AgregarProducto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,15 +313,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPrecioProducto;
         private System.Windows.Forms.TextBox txtNombreProducto;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnRestar;
         private System.Windows.Forms.Button btnSumar;
         private System.Windows.Forms.Button btnAgregarFoto;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.Button btnCategoria;
+        private System.Windows.Forms.Button btnAgregarCategoria;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboCategoria;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RichTextBox rtbDescripcionProducto;
     }
 }

@@ -108,6 +108,21 @@
     <Compile Include="AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="BACKEND\DAOs\CategoriaDAO.cs" />
+    <Compile Include="BACKEND\DAOs\ProductoDAO.cs" />
+    <Compile Include="BACKEND\DAOs\UsuarioDAO.cs" />
+    <Compile Include="EditarDatosEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarDatosEmpleado.Designer.cs">
+      <DependentUpon>EditarDatosEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarEmpleado.Designer.cs">
+      <DependentUpon>EditarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +130,12 @@
       <DependentUpon>EditarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="BACKEND\ConectionDB.cs" />
+    <Compile Include="Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket.Designer.cs">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +187,12 @@
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarDatosEmpleado.resx">
+      <DependentUpon>EditarDatosEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarEmpleado.resx">
+      <DependentUpon>EditarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditarProducto.resx">
       <DependentUpon>EditarProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteVentas.resx">
       <DependentUpon>ReporteVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket.resx">
+      <DependentUpon>Ticket.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
