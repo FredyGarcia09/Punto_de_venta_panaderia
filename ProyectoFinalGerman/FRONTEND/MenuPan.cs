@@ -83,9 +83,7 @@ namespace ProyectoFinalGerman
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            Menu RE = new Menu();
-            RE.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void MenuPan_Load(object sender, EventArgs e)

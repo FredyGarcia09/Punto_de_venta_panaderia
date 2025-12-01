@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoFinalGerman.BACKEND.DAOs;
+using ProyectoFinalGerman.MODELOS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,9 +26,39 @@ namespace ProyectoFinalGerman
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Menu RE = new Menu();
-            RE.Show();
-            this.Hide();
+            string user = txtUsuario.Text.Trim();
+            string pass = txtPass.Text.Trim();
+
+            if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass))
+            {
+                MessageBox.Show("Por favor ingresa usuario y contraseña.");
+                return;
+            }
+
+            UsuarioDAO dao = new UsuarioDAO();
+            Usuario usuarioLogueado = dao.Login(user, pass);
+
+            if (usuarioLogueado != null)
+            {
+                // Guardar datos en la sesión
+                Sesion.IdUsuario = usuarioLogueado.IdUsuario;
+                Sesion.Nombre = usuarioLogueado.Nombre;
+                Sesion.Apellidos = usuarioLogueado.Apellidos;
+                Sesion.UsuarioAcceso = usuarioLogueado.UsuarioAcceso;
+                Sesion.Rol = usuarioLogueado.TipoUsuario;
+
+                MessageBox.Show($"Bienvenido, {Sesion.NombreCompleto} ({Sesion.Rol})", "Acceso Correcto");
+                
+                Menu menu = new Menu(this);
+                menu.Show();
+                this.Hide();
+                txtPass.Clear();
+                txtUsuario.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos.", "Error de Acceso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 

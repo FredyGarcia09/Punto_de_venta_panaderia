@@ -26,9 +26,7 @@ namespace ProyectoFinalGerman
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            Menu RE = new Menu();
-            RE.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)

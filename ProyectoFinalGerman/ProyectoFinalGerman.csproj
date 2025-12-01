@@ -96,6 +96,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BACKEND\DAOs\AuditoriaDAO.cs" />
+    <Compile Include="BACKEND\DAOs\ReporteVentasPorProductoDAO.cs" />
     <Compile Include="BACKEND\DAOs\VentaDAO.cs" />
     <Compile Include="FRONTEND\Agregarcategoria.cs">
       <SubType>Form</SubType>
@@ -118,6 +120,12 @@
     <Compile Include="FRONTEND\Controles\ControlProducto.Designer.cs">
       <DependentUpon>ControlProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRONTEND\AuditoriaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRONTEND\AuditoriaProductos.Designer.cs">
+      <DependentUpon>AuditoriaProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRONTEND\EditarDatosEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +145,7 @@
       <DependentUpon>EditarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="BACKEND\ConectionDB.cs" />
+    <Compile Include="FRONTEND\HELPERS\EstilosUI.cs" />
     <Compile Include="FRONTEND\Ticket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,9 +168,9 @@
     <Compile Include="MODELOS\DetalleOrden.cs" />
     <Compile Include="MODELOS\ITEMS\ItemCarrito.cs" />
     <Compile Include="MODELOS\ITEMS\ReporteCorporativoItem.cs" />
-    <Compile Include="MODELOS\ITEMS\ReporteVentaItem.cs" />
     <Compile Include="MODELOS\Orden.cs" />
     <Compile Include="MODELOS\Producto.cs" />
+    <Compile Include="MODELOS\Sesion.cs" />
     <Compile Include="MODELOS\Usuario.cs" />
     <Compile Include="FRONTEND\RegistrarEmpleado.cs">
       <SubType>Form</SubType>
@@ -197,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRONTEND\Controles\ControlProducto.resx">
       <DependentUpon>ControlProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRONTEND\AuditoriaProductos.resx">
+      <DependentUpon>AuditoriaProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRONTEND\EditarDatosEmpleado.resx">
       <DependentUpon>EditarDatosEmpleado.cs</DependentUpon>

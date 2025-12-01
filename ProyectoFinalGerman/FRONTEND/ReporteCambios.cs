@@ -24,9 +24,7 @@ namespace ProyectoFinalGerman
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            Menu RE = new Menu();
-            RE.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnComparar_Click(object sender, EventArgs e)

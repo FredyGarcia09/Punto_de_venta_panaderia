@@ -32,6 +32,12 @@ namespace ProyectoFinalGerman
             btnAgregarFoto.FlatAppearance.BorderSize = 0;
             btnRestar.FlatAppearance.BorderSize = 0;
             btnSumar.FlatAppearance.BorderSize = 0;
+
+            if(Sesion.Rol != "Administrador")
+            {
+                btnBorrar.Enabled = false;
+                btnBorrar.Visible = false;
+            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -41,9 +47,7 @@ namespace ProyectoFinalGerman
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            Menu RE = new Menu();
-            RE.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -75,7 +79,7 @@ namespace ProyectoFinalGerman
                 ProductoDAO dao = new ProductoDAO();
                 string mensaje;
 
-                if (dao.EliminarProducto(idProducto, "Admin", out mensaje))
+                if (dao.EliminarProducto(idProducto, Sesion.UsuarioAcceso, out mensaje))
                 {
                     MessageBox.Show(mensaje, "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -107,7 +111,7 @@ namespace ProyectoFinalGerman
 
                 ProductoDAO dao = new ProductoDAO();
                 string msg;
-                if (dao.ActualizarProducto(prod, "Admin", out msg))
+                if (dao.ActualizarProducto(prod, Sesion.UsuarioAcceso, out msg))
                 {
                     MessageBox.Show(msg, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // Recargar lista
