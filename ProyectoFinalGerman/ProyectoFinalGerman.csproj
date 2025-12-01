@@ -130,6 +130,7 @@
       <DependentUpon>EditarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="BACKEND\ConectionDB.cs" />
+    <Compile Include="FRONTEND\Helpers\EstilosUI.cs" />
     <Compile Include="FRONTEND\Ticket.cs">
       <SubType>Form</SubType>
     </Compile>

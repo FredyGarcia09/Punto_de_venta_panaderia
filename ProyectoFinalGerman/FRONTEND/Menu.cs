@@ -25,6 +25,7 @@ namespace ProyectoFinalGerman
             btnReporteCambios.FlatAppearance.BorderSize = 0;
             btnReporteVentas.FlatAppearance.BorderSize = 0;
             btnCerrar.FlatAppearance.BorderSize = 0;
+            btnAdministrarUsuarios.FlatAppearance.BorderSize = 0;
         }
 
 
@@ -71,6 +72,13 @@ namespace ProyectoFinalGerman
         private void btnReporteCambios_Click(object sender, EventArgs e)
         {
             ReporteCambios RE = new ReporteCambios();
+            RE.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EditarEmpleado RE = new EditarEmpleado();
             RE.Show();
             this.Hide();
         }

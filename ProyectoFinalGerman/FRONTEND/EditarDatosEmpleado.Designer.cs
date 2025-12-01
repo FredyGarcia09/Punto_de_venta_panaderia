@@ -50,7 +50,7 @@ namespace ProyectoFinalGerman
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btnRegistrarUsuario = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -64,15 +64,18 @@ namespace ProyectoFinalGerman
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnRegresar);
-            this.groupBox1.Location = new System.Drawing.Point(-6, -13);
+            this.groupBox1.Location = new System.Drawing.Point(-8, -16);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(913, 77);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(1239, 95);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             // 
@@ -80,12 +83,13 @@ namespace ProyectoFinalGerman
             // 
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.Image = global::ProyectoFinalGerman.Properties.Resources.atras;
-            this.btnRegresar.Location = new System.Drawing.Point(26, 27);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegresar.Location = new System.Drawing.Point(35, 33);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(55, 34);
+            this.btnRegresar.Size = new System.Drawing.Size(73, 42);
             this.btnRegresar.TabIndex = 0;
             this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // txtConfirmarContrasenha
             // 
@@ -93,43 +97,47 @@ namespace ProyectoFinalGerman
             this.txtConfirmarContrasenha.BackColor = System.Drawing.Color.White;
             this.txtConfirmarContrasenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConfirmarContrasenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmarContrasenha.Location = new System.Drawing.Point(58, 344);
+            this.txtConfirmarContrasenha.Location = new System.Drawing.Point(77, 423);
+            this.txtConfirmarContrasenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtConfirmarContrasenha.Name = "txtConfirmarContrasenha";
             this.txtConfirmarContrasenha.PasswordChar = '*';
-            this.txtConfirmarContrasenha.Size = new System.Drawing.Size(370, 24);
+            this.txtConfirmarContrasenha.Size = new System.Drawing.Size(493, 28);
             this.txtConfirmarContrasenha.TabIndex = 64;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(56, 323);
+            this.label15.Location = new System.Drawing.Point(75, 398);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(170, 18);
+            this.label15.Size = new System.Drawing.Size(204, 22);
             this.label15.TabIndex = 63;
             this.label15.Text = "🔐Confirmar contraseña";
             // 
             // cboTipoUsuario
             // 
             this.cboTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoUsuario.Enabled = false;
             this.cboTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoUsuario.FormattingEnabled = true;
             this.cboTipoUsuario.Items.AddRange(new object[] {
             "Empleado",
             "Administrador"});
-            this.cboTipoUsuario.Location = new System.Drawing.Point(494, 440);
-            this.cboTipoUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.cboTipoUsuario.Location = new System.Drawing.Point(659, 542);
+            this.cboTipoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboTipoUsuario.Name = "cboTipoUsuario";
-            this.cboTipoUsuario.Size = new System.Drawing.Size(371, 25);
+            this.cboTipoUsuario.Size = new System.Drawing.Size(493, 30);
             this.cboTipoUsuario.TabIndex = 62;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(491, 419);
+            this.label14.Location = new System.Drawing.Point(655, 516);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(128, 18);
+            this.label14.Size = new System.Drawing.Size(157, 22);
             this.label14.TabIndex = 61;
             this.label14.Text = "💼Tipo de usuario";
             // 
@@ -148,10 +156,10 @@ namespace ProyectoFinalGerman
             "AB+",
             "AB-",
             "DESCONOCIDO"});
-            this.cboTipoSangre.Location = new System.Drawing.Point(494, 393);
-            this.cboTipoSangre.Margin = new System.Windows.Forms.Padding(2);
+            this.cboTipoSangre.Location = new System.Drawing.Point(659, 484);
+            this.cboTipoSangre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboTipoSangre.Name = "cboTipoSangre";
-            this.cboTipoSangre.Size = new System.Drawing.Size(371, 25);
+            this.cboTipoSangre.Size = new System.Drawing.Size(493, 30);
             this.cboTipoSangre.TabIndex = 60;
             // 
             // txtTelefono2
@@ -160,9 +168,10 @@ namespace ProyectoFinalGerman
             this.txtTelefono2.BackColor = System.Drawing.Color.White;
             this.txtTelefono2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefono2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono2.Location = new System.Drawing.Point(58, 439);
+            this.txtTelefono2.Location = new System.Drawing.Point(77, 540);
+            this.txtTelefono2.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono2.Name = "txtTelefono2";
-            this.txtTelefono2.Size = new System.Drawing.Size(370, 24);
+            this.txtTelefono2.Size = new System.Drawing.Size(493, 28);
             this.txtTelefono2.TabIndex = 59;
             // 
             // txtTelefono1
@@ -171,9 +180,10 @@ namespace ProyectoFinalGerman
             this.txtTelefono1.BackColor = System.Drawing.Color.White;
             this.txtTelefono1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefono1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono1.Location = new System.Drawing.Point(58, 392);
+            this.txtTelefono1.Location = new System.Drawing.Point(77, 482);
+            this.txtTelefono1.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono1.Name = "txtTelefono1";
-            this.txtTelefono1.Size = new System.Drawing.Size(370, 24);
+            this.txtTelefono1.Size = new System.Drawing.Size(493, 28);
             this.txtTelefono1.TabIndex = 58;
             // 
             // txtDireccion
@@ -182,9 +192,10 @@ namespace ProyectoFinalGerman
             this.txtDireccion.BackColor = System.Drawing.Color.White;
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(492, 201);
+            this.txtDireccion.Location = new System.Drawing.Point(656, 247);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(370, 24);
+            this.txtDireccion.Size = new System.Drawing.Size(493, 28);
             this.txtDireccion.TabIndex = 57;
             // 
             // txtNSS
@@ -193,9 +204,10 @@ namespace ProyectoFinalGerman
             this.txtNSS.BackColor = System.Drawing.Color.White;
             this.txtNSS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNSS.Location = new System.Drawing.Point(492, 249);
+            this.txtNSS.Location = new System.Drawing.Point(656, 306);
+            this.txtNSS.Margin = new System.Windows.Forms.Padding(4);
             this.txtNSS.Name = "txtNSS";
-            this.txtNSS.Size = new System.Drawing.Size(370, 24);
+            this.txtNSS.Size = new System.Drawing.Size(493, 28);
             this.txtNSS.TabIndex = 56;
             // 
             // txtEmail
@@ -204,9 +216,10 @@ namespace ProyectoFinalGerman
             this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(492, 153);
+            this.txtEmail.Location = new System.Drawing.Point(656, 188);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(370, 24);
+            this.txtEmail.Size = new System.Drawing.Size(493, 28);
             this.txtEmail.TabIndex = 55;
             // 
             // txtCURP
@@ -215,9 +228,10 @@ namespace ProyectoFinalGerman
             this.txtCURP.BackColor = System.Drawing.Color.White;
             this.txtCURP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCURP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCURP.Location = new System.Drawing.Point(494, 344);
+            this.txtCURP.Location = new System.Drawing.Point(659, 423);
+            this.txtCURP.Margin = new System.Windows.Forms.Padding(4);
             this.txtCURP.Name = "txtCURP";
-            this.txtCURP.Size = new System.Drawing.Size(370, 24);
+            this.txtCURP.Size = new System.Drawing.Size(493, 28);
             this.txtCURP.TabIndex = 54;
             // 
             // txtRFC
@@ -226,9 +240,10 @@ namespace ProyectoFinalGerman
             this.txtRFC.BackColor = System.Drawing.Color.White;
             this.txtRFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRFC.Location = new System.Drawing.Point(494, 297);
+            this.txtRFC.Location = new System.Drawing.Point(659, 366);
+            this.txtRFC.Margin = new System.Windows.Forms.Padding(4);
             this.txtRFC.Name = "txtRFC";
-            this.txtRFC.Size = new System.Drawing.Size(370, 24);
+            this.txtRFC.Size = new System.Drawing.Size(493, 28);
             this.txtRFC.TabIndex = 53;
             // 
             // txtContrasenha
@@ -237,10 +252,11 @@ namespace ProyectoFinalGerman
             this.txtContrasenha.BackColor = System.Drawing.Color.White;
             this.txtContrasenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContrasenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasenha.Location = new System.Drawing.Point(59, 297);
+            this.txtContrasenha.Location = new System.Drawing.Point(79, 366);
+            this.txtContrasenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasenha.Name = "txtContrasenha";
             this.txtContrasenha.PasswordChar = '*';
-            this.txtContrasenha.Size = new System.Drawing.Size(370, 24);
+            this.txtContrasenha.Size = new System.Drawing.Size(493, 28);
             this.txtContrasenha.TabIndex = 52;
             // 
             // txtUsuario
@@ -248,10 +264,12 @@ namespace ProyectoFinalGerman
             this.txtUsuario.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtUsuario.BackColor = System.Drawing.Color.White;
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsuario.Enabled = false;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(59, 249);
+            this.txtUsuario.Location = new System.Drawing.Point(79, 306);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(370, 24);
+            this.txtUsuario.Size = new System.Drawing.Size(493, 28);
             this.txtUsuario.TabIndex = 51;
             // 
             // txtApellido
@@ -260,9 +278,10 @@ namespace ProyectoFinalGerman
             this.txtApellido.BackColor = System.Drawing.Color.White;
             this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(60, 201);
+            this.txtApellido.Location = new System.Drawing.Point(80, 247);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(370, 24);
+            this.txtApellido.Size = new System.Drawing.Size(493, 28);
             this.txtApellido.TabIndex = 50;
             // 
             // txtNombre
@@ -271,33 +290,36 @@ namespace ProyectoFinalGerman
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(59, 154);
+            this.txtNombre.Location = new System.Drawing.Point(79, 190);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(370, 24);
+            this.txtNombre.Size = new System.Drawing.Size(493, 28);
             this.txtNombre.TabIndex = 49;
             // 
-            // btnRegistrarUsuario
+            // btnGuardar
             // 
-            this.btnRegistrarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnRegistrarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarUsuario.Image = global::ProyectoFinalGerman.Properties.Resources.registrarUsuario;
-            this.btnRegistrarUsuario.Location = new System.Drawing.Point(347, 487);
-            this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
-            this.btnRegistrarUsuario.Size = new System.Drawing.Size(226, 49);
-            this.btnRegistrarUsuario.TabIndex = 48;
-            this.btnRegistrarUsuario.Text = "         Registrar Usuario";
-            this.btnRegistrarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRegistrarUsuario.UseVisualStyleBackColor = false;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Image = global::ProyectoFinalGerman.Properties.Resources.guardar;
+            this.btnGuardar.Location = new System.Drawing.Point(552, 606);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(104, 60);
+            this.btnGuardar.TabIndex = 48;
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(55, 418);
+            this.label13.Location = new System.Drawing.Point(73, 514);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(230, 18);
+            this.label13.Size = new System.Drawing.Size(280, 22);
             this.label13.TabIndex = 47;
             this.label13.Text = "📞Telefono secundario (opcional)";
             // 
@@ -305,9 +327,10 @@ namespace ProyectoFinalGerman
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(55, 370);
+            this.label12.Location = new System.Drawing.Point(73, 455);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(141, 18);
+            this.label12.Size = new System.Drawing.Size(175, 22);
             this.label12.TabIndex = 46;
             this.label12.Text = "📞Telefono principal";
             // 
@@ -315,9 +338,10 @@ namespace ProyectoFinalGerman
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(489, 180);
+            this.label11.Location = new System.Drawing.Point(652, 222);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 18);
+            this.label11.Size = new System.Drawing.Size(107, 22);
             this.label11.TabIndex = 45;
             this.label11.Text = "📍Dirección";
             // 
@@ -325,9 +349,10 @@ namespace ProyectoFinalGerman
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(492, 228);
+            this.label10.Location = new System.Drawing.Point(656, 281);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(235, 18);
+            this.label10.Size = new System.Drawing.Size(285, 22);
             this.label10.TabIndex = 44;
             this.label10.Text = "📓Numero de seguro social (NSS)";
             // 
@@ -335,9 +360,10 @@ namespace ProyectoFinalGerman
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(491, 132);
+            this.label9.Location = new System.Drawing.Point(655, 162);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 18);
+            this.label9.Size = new System.Drawing.Size(76, 22);
             this.label9.TabIndex = 43;
             this.label9.Text = "📨Email";
             // 
@@ -345,19 +371,21 @@ namespace ProyectoFinalGerman
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(57, 275);
+            this.label8.Location = new System.Drawing.Point(76, 338);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 18);
+            this.label8.Size = new System.Drawing.Size(434, 22);
             this.label8.TabIndex = 42;
-            this.label8.Text = "🔐Contraseña";
+            this.label8.Text = "🔐Contraseña (Deja en blanco si no se quiere editar)";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(491, 370);
+            this.label7.Location = new System.Drawing.Point(655, 455);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 18);
+            this.label7.Size = new System.Drawing.Size(153, 22);
             this.label7.TabIndex = 41;
             this.label7.Text = "🩸Tipo de sangre";
             // 
@@ -365,9 +393,10 @@ namespace ProyectoFinalGerman
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(492, 323);
+            this.label6.Location = new System.Drawing.Point(656, 398);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 18);
+            this.label6.Size = new System.Drawing.Size(83, 22);
             this.label6.TabIndex = 40;
             this.label6.Text = "📓CURP";
             // 
@@ -375,9 +404,10 @@ namespace ProyectoFinalGerman
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(491, 275);
+            this.label5.Location = new System.Drawing.Point(655, 338);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 18);
+            this.label5.Size = new System.Drawing.Size(69, 22);
             this.label5.TabIndex = 39;
             this.label5.Text = "📓RFC";
             // 
@@ -385,9 +415,10 @@ namespace ProyectoFinalGerman
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(58, 228);
+            this.label4.Location = new System.Drawing.Point(77, 281);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 18);
+            this.label4.Size = new System.Drawing.Size(94, 22);
             this.label4.TabIndex = 38;
             this.label4.Text = "👤Usuario";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -396,9 +427,10 @@ namespace ProyectoFinalGerman
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(58, 180);
+            this.label3.Location = new System.Drawing.Point(77, 222);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 18);
+            this.label3.Size = new System.Drawing.Size(96, 22);
             this.label3.TabIndex = 37;
             this.label3.Text = "👤Apellido";
             // 
@@ -406,9 +438,10 @@ namespace ProyectoFinalGerman
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(59, 132);
+            this.label2.Location = new System.Drawing.Point(79, 162);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 18);
+            this.label2.Size = new System.Drawing.Size(100, 22);
             this.label2.TabIndex = 36;
             this.label2.Text = "👤Nombre ";
             // 
@@ -416,17 +449,27 @@ namespace ProyectoFinalGerman
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 78);
+            this.label1.Location = new System.Drawing.Point(45, 96);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(537, 29);
+            this.label1.Size = new System.Drawing.Size(671, 36);
             this.label1.TabIndex = 65;
-            this.label1.Text = "Actulizar datos del Empleado / Administrador";
+            this.label1.Text = "Actualizar datos del Empleado / Administrador";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(4, 684);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1227, 78);
+            this.groupBox2.TabIndex = 66;
+            this.groupBox2.TabStop = false;
             // 
             // EditarDatosEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 563);
+            this.ClientSize = new System.Drawing.Size(1225, 759);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtConfirmarContrasenha);
             this.Controls.Add(this.label15);
@@ -444,7 +487,7 @@ namespace ProyectoFinalGerman
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.btnRegistrarUsuario);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -458,8 +501,10 @@ namespace ProyectoFinalGerman
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditarDatosEmpleado";
             this.Text = "EditarDatosEmpleado";
+            this.Load += new System.EventHandler(this.EditarDatosEmpleado_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -486,7 +531,7 @@ namespace ProyectoFinalGerman
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Button btnRegistrarUsuario;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -500,5 +545,6 @@ namespace ProyectoFinalGerman
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
