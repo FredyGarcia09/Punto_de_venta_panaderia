@@ -12,7 +12,7 @@ namespace ProyectoFinalGerman.MODELOS
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
         public string UsuarioAcceso { get; set; } // Usuario en DB
-        public string Contrasenha { get; set; }   // Texto plano (solo para transporte)
+        public string Contrasenha { get; set; }
         public string Rfc { get; set; }
         public string Curp { get; set; }
         public string Email { get; set; }

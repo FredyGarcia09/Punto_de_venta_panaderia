@@ -171,8 +171,6 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
                 }
                 catch (Exception ex)
                 {
-                    // AQUÍ ESTABA EL PROBLEMA: Antes esto estaba vacío y ocultaba el error real.
-                    // Ahora, si falla, lanzamos el error para verlo en pantalla.
                     throw new Exception("Error al leer usuario (DAO): " + ex.Message);
                 }
             }

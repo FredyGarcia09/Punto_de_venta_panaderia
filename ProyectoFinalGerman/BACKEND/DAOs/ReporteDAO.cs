@@ -71,14 +71,12 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        // Extraemos Mes y Año de los DateTimePicker
                         cmd.Parameters.AddWithValue("p_Mes1", fecha1.Month);
                         cmd.Parameters.AddWithValue("p_Anio1", fecha1.Year);
 
                         cmd.Parameters.AddWithValue("p_Mes2", fecha2.Month);
                         cmd.Parameters.AddWithValue("p_Anio2", fecha2.Year);
 
-                        // La lista de IDs "1,2,3"
                         cmd.Parameters.AddWithValue("p_ListaIDs", listaIds);
 
                         using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
@@ -89,7 +87,7 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
                 }
                 catch (Exception ex)
                 {
-                    // Log error
+                    // Error
                 }
             }
             return dt;
