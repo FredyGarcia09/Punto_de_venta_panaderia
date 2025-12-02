@@ -99,7 +99,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvAuditoriaProductos);
             this.Name = "AuditoriaProductos";
-            this.Text = "AuditoriaProductos";
+            this.Text = "Auditoria de Productos";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.AuditoriaProductos_Load);
             this.groupBox1.ResumeLayout(false);

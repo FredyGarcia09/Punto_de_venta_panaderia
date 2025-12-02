@@ -344,7 +344,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Name = "EditarProducto";
-            this.Text = "EditarProducto";
+            this.Text = "Editar un Producto";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.EditarProducto_Load);
             this.groupBox1.ResumeLayout(false);

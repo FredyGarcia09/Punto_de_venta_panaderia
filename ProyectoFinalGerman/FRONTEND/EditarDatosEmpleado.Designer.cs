@@ -503,7 +503,7 @@ namespace ProyectoFinalGerman
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditarDatosEmpleado";
-            this.Text = "EditarDatosEmpleado";
+            this.Text = "Editar datos de Empleado";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.EditarDatosEmpleado_Load);
             this.groupBox1.ResumeLayout(false);

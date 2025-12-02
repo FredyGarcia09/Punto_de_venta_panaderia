@@ -137,7 +137,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
-            this.Text = "Form1";
+            this.Text = "Login";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Login_Load);
             this.groupBox1.ResumeLayout(false);

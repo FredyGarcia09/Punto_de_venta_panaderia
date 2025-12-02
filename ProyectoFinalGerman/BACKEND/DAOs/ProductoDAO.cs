@@ -9,9 +9,24 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinalGerman.BACKEND.DAOs
 {
+    /// <summary>
+    /// Clase de Acceso a Datos (DAO) para la gestión de productos.
+    /// Contiene métodos para consultar, insertar, actualizar y eliminar productos en la base de datos.
+    /// </summary>
     public class ProductoDAO
     {
+        /// <summary>
+        /// Instancia para manejar la conexión con la base de datos MySQL.
+        /// </summary>
         private ConexionDB conexion = new ConexionDB();
+
+        /// <summary>
+        /// Obtiene un listado de todas las categorías disponibles.
+        /// Utilizado para llenar controles (Combo box por ejemplo) en las interfaces de usuario.
+        /// </summary>
+        /// <returns>
+        /// Un objeto <see cref="DataTable"/> con las columnas IdCategoria y nombreCategoria.
+        /// </returns>
         public DataTable ObtenerCategorias()
         {
             DataTable dt = new DataTable();
@@ -31,6 +46,17 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
             return dt;
         }
 
+        /// <summary>
+        /// Obtiene una lista de productos para mostrar en tablas o reportes.
+        /// Permite filtrar si se desean ver también los productos descontinuados.
+        /// </summary>
+        /// <param name="mostrarDescontinuados">
+        /// Si es <c>true</c>, incluye productos descontinuados en el resultado.
+        /// Si es <c>false</c>, solo muestra los activos.
+        /// </param>
+        /// <returns>
+        /// Un <see cref="DataTable"/> con la información de los productos, formateada para mostrarse en listas.
+        /// </returns>
         public DataTable ObtenerTodos(bool mostrarDescontinuados)
         {
             DataTable dt = new DataTable();
@@ -55,6 +81,14 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
             return dt;
         }
 
+        /// <summary>
+        /// Busca y recupera toda la información detallada de un producto específico por su ID.
+        /// </summary>
+        /// <param name="id">Identificador único del producto a buscar.</param>
+        /// <returns>
+        /// Un objeto <see cref="Producto"/> con todos sus datos llenos si se encuentra; 
+        /// de lo contrario, devuelve <c>null</c>.
+        /// </returns>
         public Producto ObtenerPorId(int id)
         {
             Producto prod = null;
@@ -92,6 +126,13 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
             return prod;
         }
 
+        /// <summary>
+        /// Inserta un nuevo producto en la base de datos.
+        /// </summary>
+        /// <param name="prod">Objeto <see cref="Producto"/> con la información a guardar.</param>
+        /// <param name="usuarioActual">Nombre del usuario que realiza la acción.</param>
+        /// <param name="mensaje">Mensaje de salida con el resultado de la operación.</param>
+        /// <returns><c>true</c> si la inserción fue exitosa; de lo contrario, <c>false</c>.</returns>
         public bool InsertarProducto(Producto prod, string usuarioActual, out string mensaje)
         {
             using (MySqlConnection conn = conexion.ObtenerConexion())
@@ -134,6 +175,13 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
             }
         }
 
+        /// <summary>
+        /// Actualiza la información completa de un producto existente.
+        /// </summary>
+        /// <param name="prod">Objeto <see cref="Producto"/> con los datos actualizados.</param>
+        /// <param name="usuarioActual">Usuario que realiza la modificación.</param>
+        /// <param name="mensaje">Mensaje de resultado.</param>
+        /// <returns><c>true</c> si se actualizó correctamente.</returns>
         public bool ActualizarProducto(Producto prod, string usuarioActual, out string mensaje)
         {
             using (MySqlConnection conn = conexion.ObtenerConexion())
@@ -166,7 +214,14 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
             }
         }
 
-        // DESCONTINUAR/REACTIVAR
+        /// <summary>
+        /// Cambia el estado de un producto (Descontinuado/Activo).
+        /// </summary>
+        /// <param name="idProducto">ID del producto a modificar.</param>
+        /// <param name="nuevoEstadoDescontinuado"><c>true</c> para descontinuar, <c>false</c> para reactivar.</param>
+        /// <param name="usuario">Usuario responsable.</param>
+        /// <param name="mensaje">Mensaje de resultado.</param>
+        /// <returns><c>true</c> si el cambio fue exitoso.</returns>
         public bool CambiarEstado(int idProducto, bool nuevoEstadoDescontinuado, string usuario, out string mensaje)
         {
             using (MySqlConnection conn = conexion.ObtenerConexion())
@@ -194,6 +249,14 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
             }
         }
 
+        /// <summary>
+        /// Elimina físicamente un producto y su historial de ventas de la base de datos.
+        /// ¡CUIDADO! Esta es una acción irreversible, solo apta para administradores.
+        /// </summary>
+        /// <param name="idProducto">ID del producto a eliminar.</param>
+        /// <param name="usuario">Usuario que ejecuta la eliminación.</param>
+        /// <param name="mensaje">Mensaje de resultado.</param>
+        /// <returns><c>true</c> si se eliminó correctamente.</returns>
         public bool EliminarProducto(int idProducto, string usuario, out string mensaje)
         {
             using (MySqlConnection conn = conexion.ObtenerConexion())
@@ -220,11 +283,11 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
             }
         }
 
-        // ... (Tus otros métodos arriba) ...
-
-        // =============================================================
-        // AGREGAR ESTE MÉTODO PARA EL MENÚ VISUAL
-        // =============================================================
+        /// <summary>
+        /// Obtiene una lista de objetos Producto optimizada para mostrar en el menú de compras (tarjetas visuales).
+        /// Incluye la foto y el nombre de la categoría.
+        /// </summary>
+        /// <returns>Una lista de objetos <see cref="Producto"/>.</returns>
         public List<Producto> ObtenerProductosParaMenu()
         {
             List<Producto> lista = new List<Producto>();
@@ -258,10 +321,8 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
                             prod.NombreProducto = reader["nombreProducto"].ToString();
                             prod.Precio = Convert.ToDecimal(reader["precio"]);
 
-                            // Esta propiedad 'NombreCategoria' la agregamos al Modelo como auxiliar
                             prod.NombreCategoria = reader["nombreCategoria"].ToString();
 
-                            // Manejo seguro de la imagen (BLOB)
                             if (reader["fotoProducto"] != DBNull.Value)
                             {
                                 prod.FotoProducto = (byte[])reader["fotoProducto"];
@@ -277,7 +338,6 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
                 }
                 catch (Exception ex)
                 {
-                    // Maneja el error como prefieras (log, throw, etc.)
                     throw new Exception("Error al cargar menú: " + ex.Message);
                 }
             }

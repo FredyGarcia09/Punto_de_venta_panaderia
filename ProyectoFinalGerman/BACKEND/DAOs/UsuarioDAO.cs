@@ -10,10 +10,25 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinalGerman.BACKEND.DAOs
 {
+    /// <summary>
+    /// Clase de Acceso a Datos (DAO) para la gestión de usuarios del sistema.
+    /// Proporciona métodos para registrar, actualizar, consultar y autenticar usuarios (empleados y administradores).
+    /// </summary>
     public class UsuarioDAO
     {
+        /// <summary>
+        /// Instancia para manejar la conexión con la base de datos MySQL.
+        /// </summary>
         private ConexionDB conexion = new ConexionDB();
 
+        /// <summary>
+        /// Registra un nuevo usuario en la base de datos con toda su información personal y de acceso.
+        /// </summary>
+        /// <param name="user">Objeto <see cref="Usuario"/> que contiene los datos del empleado a registrar.</param>
+        /// <param name="mensaje">Mensaje de salida que indica el resultado de la operación (éxito o error).</param>
+        /// <returns>
+        /// <c>true</c> si el usuario se registró correctamente; de lo contrario, <c>false</c>.
+        /// </returns>
         public bool RegistrarUsuario(Usuario user, out string mensaje)
         {
             using (MySqlConnection conn = conexion.ObtenerConexion())
@@ -30,28 +45,19 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
                         cmd.Parameters.AddWithValue("p_Apellidos", user.Apellidos);
                         cmd.Parameters.AddWithValue("p_Usuario", user.UsuarioAcceso);
 
-
+                        // Encriptación de contraseña
                         string passHash = EncriptarPass(user.Contrasenha);
                         cmd.Parameters.AddWithValue("p_PassHash", passHash);
 
-                        // Parametros opcionales
-
+                        // Parametros opcionales (Manejo de nulos)
                         cmd.Parameters.AddWithValue("p_Rfc", string.IsNullOrEmpty(user.Rfc) ? DBNull.Value : (object)user.Rfc);
-
                         cmd.Parameters.AddWithValue("p_Curp", string.IsNullOrEmpty(user.Curp) ? DBNull.Value : (object)user.Curp);
-
                         cmd.Parameters.AddWithValue("p_Email1", string.IsNullOrEmpty(user.Email) ? DBNull.Value : (object)user.Email);
-
                         cmd.Parameters.AddWithValue("p_NSS", string.IsNullOrEmpty(user.Nss) ? DBNull.Value : (object)user.Nss);
-
                         cmd.Parameters.AddWithValue("p_Direccion", string.IsNullOrEmpty(user.Direccion) ? DBNull.Value : (object)user.Direccion);
-
                         cmd.Parameters.AddWithValue("p_Tel1", user.Telefono1);
-
                         cmd.Parameters.AddWithValue("p_Tel2", string.IsNullOrEmpty(user.Telefono2) ? DBNull.Value : (object)user.Telefono2);
-
                         cmd.Parameters.AddWithValue("p_TipoSangre", string.IsNullOrEmpty(user.TipoSangre) ? DBNull.Value : (object)user.TipoSangre);
-
                         cmd.Parameters.AddWithValue("p_TipoUsuario", user.TipoUsuario);
 
                         // Ejecutar
@@ -71,7 +77,8 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
                 }
                 catch (MySqlException ex)
                 {
-                    if (ex.Number == 1062) 
+                    // Manejo para duplicados
+                    if (ex.Number == 1062)
                     {
                         mensaje = "El nombre de usuario ya existe. Por favor elige otro.";
                     }
@@ -89,7 +96,11 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
             }
         }
 
-        // Encriptar contraseña a SHA256
+        /// <summary>
+        /// Encripta una cadena de texto utilizando el algoritmo SHA256.
+        /// </summary>
+        /// <param name="textoPlano">La contraseña o texto a encriptar.</param>
+        /// <returns>Una cadena hexadecimal que representa el hash SHA256 del texto.</returns>
         private string EncriptarPass(string textoPlano)
         {
             if (string.IsNullOrEmpty(textoPlano)) return "";
@@ -106,6 +117,10 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
             }
         }
 
+        /// <summary>
+        /// Obtiene una lista resumen de todos los usuarios registrados.
+        /// </summary>
+        /// <returns>Un <see cref="DataTable"/> con la información resumida de los usuarios.</returns>
         public DataTable ObtenerUsuariosResumen()
         {
             DataTable dt = new DataTable();
@@ -131,6 +146,14 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
             return dt;
         }
 
+        /// <summary>
+        /// Obtiene toda la información detallada de un usuario específico por su ID.
+        /// </summary>
+        /// <param name="id">El ID único del usuario a buscar.</param>
+        /// <returns>
+        /// Un objeto <see cref="Usuario"/> con todos los datos cargados si se encuentra; 
+        /// de lo contrario, devuelve <c>null</c>.
+        /// </returns>
         public Usuario ObtenerPorId(int id)
         {
             Usuario u = null;
@@ -155,7 +178,7 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
                                 u.Apellidos = reader["apellidos"].ToString();
                                 u.UsuarioAcceso = reader["usuario"].ToString();
 
-                                // Validamos nulos para evitar errores
+                                // Valuida nulos
                                 u.Rfc = reader["rfc"] == DBNull.Value ? "" : reader["rfc"].ToString();
                                 u.Curp = reader["curp"].ToString();
                                 u.Nss = reader["NSS"] == DBNull.Value ? "" : reader["NSS"].ToString();
@@ -177,6 +200,13 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
             return u;
         }
 
+        /// <summary>
+        /// Actualiza la información de un usuario existente en la base de datos.
+        /// Permite actualizar la contraseña solo si se proporciona una nueva.
+        /// </summary>
+        /// <param name="user">Objeto <see cref="Usuario"/> con los datos actualizados.</param>
+        /// <param name="mensaje">Mensaje de salida con el resultado de la operación.</param>
+        /// <returns><c>true</c> si la actualización fue exitosa.</returns>
         public bool ActualizarUsuario(Usuario user, out string mensaje)
         {
             using (MySqlConnection conn = conexion.ObtenerConexion())
@@ -193,7 +223,8 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
                         cmd.Parameters.AddWithValue("p_Apellidos", user.Apellidos);
                         cmd.Parameters.AddWithValue("p_Usuario", user.UsuarioAcceso);
 
-                        // Se cambia o no la contraseña
+                        // Si no está vacía, se encripta y actualiza.
+                        // Si está vacía, se envía DBNull para mantener la actual.
                         if (!string.IsNullOrEmpty(user.Contrasenha))
                         {
                             string hash = EncriptarPass(user.Contrasenha);
@@ -233,6 +264,15 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
             }
         }
 
+        /// <summary>
+        /// Valida las credenciales de un usuario para permitir el acceso al sistema.
+        /// </summary>
+        /// <param name="user">Nombre de usuario.</param>
+        /// <param name="passTextoPlano">Contraseña en texto plano ingresada por el usuario.</param>
+        /// <returns>
+        /// Un objeto <see cref="Usuario"/> con la información básica (ID, Nombre, Rol) si las credenciales son correctas;
+        /// de lo contrario, devuelve <c>null</c>.
+        /// </returns>
         public Usuario Login(string user, string passTextoPlano)
         {
             using (MySqlConnection conn = conexion.ObtenerConexion())
@@ -245,7 +285,7 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("p_User", user);
 
-                        // Encriptar contraseña
+                        // Encriptar contraseña para comparar
                         string passHash = EncriptarPass(passTextoPlano);
                         cmd.Parameters.AddWithValue("p_Pass", passHash);
 
@@ -269,7 +309,7 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
                     return null;
                 }
             }
-            return null; // No se encontro
+            return null; // Incorrecto o no encontrado
         }
     }
 }

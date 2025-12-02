@@ -144,7 +144,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvVentas);
             this.Name = "ReporteVentas";
-            this.Text = "ReporteVentas";
+            this.Text = "Reporte de Ventas";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.ReporteVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();

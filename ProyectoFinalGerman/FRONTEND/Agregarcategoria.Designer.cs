@@ -129,7 +129,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Agregarcategoria";
-            this.Text = "Agregarcategoria";
+            this.Text = "Agregar una Categoria";
             this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -159,7 +159,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Name = "MenuPan";
-            this.Text = "MenuPan";
+            this.Text = "Registrar un Compra";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.MenuPan_Load);
             this.groupBox1.ResumeLayout(false);

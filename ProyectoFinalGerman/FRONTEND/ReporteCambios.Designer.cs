@@ -162,7 +162,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "ReporteCambios";
-            this.Text = "ReporteCambios";
+            this.Text = "Reporte Comparativo";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.ReporteCambios_Load);
             this.groupBox1.ResumeLayout(false);

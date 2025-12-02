@@ -9,10 +9,29 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinalGerman.BACKEND.DAOs
 {
+    /// <summary>
+    /// Clase de Acceso a Datos (DAO) para la gestión de categorías de productos.
+    /// Contiene métodos para insertar, consultar y administrar las categorías en la base de datos.
+    /// </summary>
     public class CategoriaDao
     {
+        /// <summary>
+        /// Instancia para manejar la conexión con la base de datos MySQL.
+        /// </summary>
         private ConexionDB conexion = new ConexionDB();
 
+        /// <summary>
+        /// Registra una nueva categoría en la base de datos.
+        /// </summary>
+        /// <param name="cat">Objeto de tipo <see cref="Categoria"/> que contiene los datos a insertar (Nombre y Descripción).</param>
+        /// <param name="mensaje">Parámetro de salida que devolverá un mensaje de éxito o el detalle del error ocurrido.</param>
+        /// <returns>
+        /// <c>true</c> si la categoría se registró exitosamente; de lo contrario, <c>false</c>.
+        /// </returns>
+        /// <remarks>
+        /// Este método utiliza el procedimiento almacenado 'sp_RegistrarCategoria'.
+        /// La descripción es opcional, en xcaso de estar vacía se enviará como DBNull.
+        /// </remarks>
         public bool RegistrarCategoria(Categoria cat, out string mensaje)
         {
             using (MySqlConnection conn = conexion.ObtenerConexion())
@@ -26,7 +45,7 @@ namespace ProyectoFinalGerman.BACKEND.DAOs
 
                         cmd.Parameters.AddWithValue("p_Nombre", cat.NombreCategoria);
 
-                        // Manejo de nulos para descripción
+                        // Si esta vacio se guarda NULL en la BD
                         cmd.Parameters.AddWithValue("p_Descripcion",
                             string.IsNullOrEmpty(cat.Descripcion) ? DBNull.Value : (object)cat.Descripcion);
 

@@ -304,7 +304,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "AgregarProducto";
-            this.Text = "AgregarProducto";
+            this.Text = "Agregar Producto";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.AgregarProducto_Load);
             this.groupBox1.ResumeLayout(false);

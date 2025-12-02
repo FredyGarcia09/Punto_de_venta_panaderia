@@ -497,7 +497,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegistrarEmpleado";
-            this.Text = " ";
+            this.Text = " Registrar un Empleado";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.RegistrarEmpleado_Load);
             this.groupBox1.ResumeLayout(false);

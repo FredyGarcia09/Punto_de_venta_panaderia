@@ -97,9 +97,8 @@ namespace ProyectoFinalGerman
             this.lblIdEmpleado.Location = new System.Drawing.Point(221, 258);
             this.lblIdEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdEmpleado.Name = "lblIdEmpleado";
-            this.lblIdEmpleado.Size = new System.Drawing.Size(45, 20);
+            this.lblIdEmpleado.Size = new System.Drawing.Size(0, 20);
             this.lblIdEmpleado.TabIndex = 7;
-            this.lblIdEmpleado.Text = "texto";
             // 
             // lblCambio
             // 
@@ -108,9 +107,8 @@ namespace ProyectoFinalGerman
             this.lblCambio.Location = new System.Drawing.Point(151, 738);
             this.lblCambio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCambio.Name = "lblCambio";
-            this.lblCambio.Size = new System.Drawing.Size(45, 20);
+            this.lblCambio.Size = new System.Drawing.Size(0, 20);
             this.lblCambio.TabIndex = 8;
-            this.lblCambio.Text = "texto";
             // 
             // lblTotal
             // 
@@ -220,9 +218,8 @@ namespace ProyectoFinalGerman
             this.lblFecha.Location = new System.Drawing.Point(221, 286);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(45, 20);
+            this.lblFecha.Size = new System.Drawing.Size(0, 20);
             this.lblFecha.TabIndex = 19;
-            this.lblFecha.Text = "texto";
             // 
             // label1
             // 
@@ -243,9 +240,8 @@ namespace ProyectoFinalGerman
             this.lblGranTotal.Location = new System.Drawing.Point(390, 789);
             this.lblGranTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGranTotal.Name = "lblGranTotal";
-            this.lblGranTotal.Size = new System.Drawing.Size(76, 32);
+            this.lblGranTotal.Size = new System.Drawing.Size(0, 32);
             this.lblGranTotal.TabIndex = 21;
-            this.lblGranTotal.Text = "texto";
             // 
             // label5
             // 
@@ -256,7 +252,7 @@ namespace ProyectoFinalGerman
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(286, 32);
             this.label5.TabIndex = 22;
-            this.label5.Text = "Gracias por su visita!.";
+            this.label5.Text = "¡Gracias por su visita!";
             // 
             // txtEfectivo
             // 

@@ -109,7 +109,7 @@ namespace ProyectoFinalGerman
             this.Controls.Add(this.dgvEmpleados);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditarEmpleado";
-            this.Text = "EditarEmpleado";
+            this.Text = "Editar un Empleado";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.EditarEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
